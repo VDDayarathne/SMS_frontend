@@ -19,10 +19,11 @@ const user = {
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Membership', href: '#', current: false },
+  { name: 'Sport Shedules', href: '#', current: false },
+  { name: 'Swimming', href: '#', current: false },
+  { name: 'Fitness', href: '#', current: false },
+  { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -46,6 +47,15 @@ export default function Example() {
         ```
       */}
       <div className="min-h-full">
+      <header className="bg-white shadow">
+                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+
+                  <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={50} className="mx-auto" />
+                  Sabaragamuwa Unversity of Sri Lanka
+                  </h1>
+                </div>
+              </header>
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
             <>
@@ -192,7 +202,7 @@ export default function Example() {
 
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">League Sabra</h1>
           </div>
         </header>
         <main>

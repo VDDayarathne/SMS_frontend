@@ -1,15 +1,18 @@
 import React from 'react';
-import './App.css';
-import Main from './components/Main';
-// Assuming navbar is a component, you should import it correctly
-import LoginForm from './components/LoginForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Example from './components/Dashboard';
+
+import AboutUs from './components/AboutUs';
+
 
 function App() {
   return (
-    <div className="App">
-      <LoginForm />
-      <Main />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Example />} />
+        <Route path="/about-us" element={<AboutUs />} />
+      </Routes>
+    </Router>
   );
 }
 
