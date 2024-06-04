@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default () => {
     return(
@@ -12,7 +13,9 @@ export default () => {
 				<span className="text-xs uppercase dark:text-gray-600">Join, it's free</span>
 				<h3 className="text-3xl font-bold">Get in touch with latest news</h3>
 				<p className="my-6 dark:text-gray-600">Winning isn't everything, but wanting to win is.</p>
+				<Link to="/Latest-news">
 				<button type="button" className="self-start">Latest news</button>
+				</Link>
 			</div>
 		</div>
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
@@ -21,7 +24,9 @@ export default () => {
 				<span className="text-xs uppercase dark:text-gray-600">Join, it's free</span>
 				<h3 className="text-3xl font-bold">Access to the tournament</h3>
 				<p className="my-6 dark:text-gray-600">The Masters is the one tournament with a timeless quality, where legends are celebrated.</p>
+				<Link to="/Event-Tournament">
 				<button type="button" className="self-start">Events and tournaments</button>
+				</Link>
 			</div>
 		</div>
 		<div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">

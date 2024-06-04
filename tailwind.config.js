@@ -5,6 +5,8 @@ module.exports = {
             "./src/components/Sidebar.{js,jsx,html}" ,
             "./src/components/Footer.{js,jsx,html}" ,
             "./src/components/FirstPage.{js,jsx,html}" ,
+            "./src/components/LatestNews.{js,jsx,html}" ,
+            "./src/components/EventsAndTournament.{js,jsx,html}" ,
             ],
   theme: {
     extend: {},
