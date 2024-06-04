@@ -6,9 +6,10 @@ export default () => {
         <main className="w-full h-screen flex flex-col items-center justify-center px-4">
             <div className="max-w-sm w-full text-gray-600">
                 <div className="text-center">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={150} className="mx-auto" />
-                    <div className="mt-5 space-y-2">
-                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Sign up</h3>
+                    <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
+                    <div className="mt-5 space-y-1">
+                        <h4 className="text-gray-800 text-2xl font-bold sm:text-3xl">Membership of Sport Center</h4>
+                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl"></h3>
                         <p className="">Already have an account? <a href="javascript:void(0)" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</a></p>
                     </div>
                 </div>

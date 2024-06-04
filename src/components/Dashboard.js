@@ -1,4 +1,10 @@
+import React from 'react';
 import { Fragment } from 'react'
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import FirstPage from './FirstPage';
+
+
 import {
   Disclosure,
   DisclosureButton,
@@ -19,7 +25,7 @@ const user = {
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Membership', href: '#', current: false },
+  { name: 'Membership', href: '/login', current: false },
   { name: 'Sport Shedules', href: '#', current: false },
   { name: 'Swimming', href: '#', current: false },
   { name: 'Fitness', href: '#', current: false },
@@ -38,21 +44,28 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <>
-      {/*
+      {
+        <React.Fragment>
+        <Sidebar />
+
+        </React.Fragment>
+      /*
         This example requires updating your template:
 
         ```
         <html class="h-full bg-gray-100">
         <body class="h-full">
-        ```
+        ```\
+            <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={50} className="mx-auto" />
+
       */}
       <div className="min-h-full">
+
       <header className="bg-white shadow">
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
                   <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                  <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={50} className="mx-auto" />
-                  Sabaragamuwa Unversity of Sri Lanka
+                     Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>
               </header>
@@ -209,7 +222,29 @@ export default function Example() {
           <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
       </div>
+
+      {
+                  <React.Fragment>
+                  <FirstPage />
+                  <Footer />
+
+                  </React.Fragment>
+                /*
+                  This example requires updating your template:
+
+                  ```
+                  <html class="h-full bg-gray-100">
+                  <body class="h-full">
+                  ```\
+                      <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={50} className="mx-auto" />
+
+                */}
+
+
     </>
+
+
+
   )
   }
 

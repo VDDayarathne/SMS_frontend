@@ -161,7 +161,7 @@ const Sidebar = () => {
           <div className="h-20 flex items-center justify-center px-8">
             <a href="javascript:void(0)" className="flex-none">
               <img
-                src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180"
+                src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png"
                 width={35}
                 className="mx-auto"
               />
