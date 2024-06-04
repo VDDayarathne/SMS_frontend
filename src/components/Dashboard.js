@@ -21,11 +21,11 @@ const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://th.bing.com/th/id/R.d2c893f55930c7cb5bfe41538be295d7?rik=RCCbETsRGcm2iQ&pid=ImgRaw&r=0',
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Membership', href: '/login', current: false },
+  { name: 'Membership', href: '/register', current: false },
   { name: 'Sport Shedules', href: '#', current: false },
   { name: 'Swimming', href: '#', current: false },
   { name: 'Fitness', href: '#', current: false },
@@ -44,21 +44,7 @@ function classNames(...classes) {
 export default function Example() {
   return (
     <>
-      {
-        <React.Fragment>
-        <Sidebar />
 
-        </React.Fragment>
-      /*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```\
-            <img src="https://tse3.mm.bing.net/th?id=OIP.ZPwpsmm0qeQ4p28dC2afRAHaHa&pid=Api&P=0&h=180" width={50} className="mx-auto" />
-
-      */}
       <div className="min-h-full">
 
       <header className="bg-white shadow">

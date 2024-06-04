@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { BrowserRouter} from 'react-router-dom';
 import Example from './components/Dashboard';
 import Dashboard from './components/Dashboard';
-import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
 import LatestNews from './components/LatestNews';
 import FirstPage from './components/FirstPage';
 import EventsAndTournament from  './components/EventsAndTournament';
@@ -18,7 +18,7 @@ function App() {
       <Routes>
                 <Route exact path="/" element={<Dashboard />} />
                 <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/login" element={<LoginForm />} />
+                <Route path="/register" element={<RegisterForm />} />
       </Routes>
       <Routes>
                 <Route exact path="/" element={<FirstPage />} />
