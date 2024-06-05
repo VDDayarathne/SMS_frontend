@@ -25,8 +25,8 @@ const user = {
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Membership', href: '/register', current: false },
-  { name: 'Sport Shedules', href: '#', current: false },
+  { name: 'Membership', href: '/login', current: false },
+  { name: 'Sport Shedules', href: '/sport-shedule', current: false },
   { name: 'Swimming', href: '#', current: false },
   { name: 'Fitness', href: '#', current: false },
   { name: 'About us', href: '/about-us', current: false },
