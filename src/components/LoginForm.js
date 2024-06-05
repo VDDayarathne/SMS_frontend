@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 function LoginForm({ onLogin }) {
 
      const [email, setEmail] = useState('');
+      const navigate = useNavigate();
       const [password, setPassword] = useState('');
 
       const handleLogin = async () => {
@@ -15,7 +16,9 @@ function LoginForm({ onLogin }) {
           const url = `http://localhost:8080/api/v1/user/get?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
           const response = await axios.get(url);
           const userData = response.data;
+
           onLogin(userData);
+                navigate('/dashboard', { replace: true });
 
         } catch (error) {
           console.error('Login error:', error);
