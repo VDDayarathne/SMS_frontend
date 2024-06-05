@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Avatar from "@radix-ui/react-avatar";
 
 const Sidebar = () => {
+
+    const [email, setEmail] = useState('');
+
+      useEffect(() => {
+        // You can also fetch the email from a API or a context here
+        const storedEmail = localStorage.getItem('email');
+        if (storedEmail) {
+          setEmail(storedEmail);
+        }
+      }, []);
+
+      const handleLogin = (email) => {
+        setEmail(email);
+        localStorage.setItem('email', email);
+      };
+
   const navigation = [
     {
       href: "javascript:void(0)",
@@ -220,7 +236,7 @@ const Sidebar = () => {
                   <DropdownMenu.Portal>
                     <DropdownMenu.Content className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
                       <span className="block text-gray-500/80 p-2">
-                        vienna@gmail.com
+                        {email}
                       </span>
                       <DropdownMenu.Item asChild className="outline-none">
                         <a

@@ -1,23 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 
-export default () => {
+function RegistrationPage(){
+    const [username, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [registrationSuccess, setRegistrationSuccess] = useState(false);
+
+    const handleRegistration = async () => {
+            try {
+            const userData = {
+                username,
+                email,
+                password
+            };
+
+            const response = await axios.post('http://localhost:8080/api/v1/user/add', userData);
+            console.log('User registered:', response.data);
+
+            } catch (error) {
+              console.error('Registration error:', error);
+            }
+            setRegistrationSuccess(true);
+          };
+
+  if (registrationSuccess) {
     return (
-        <main className="w-full h-screen flex flex-col items-center justify-center px-4">
-            <div className="max-w-sm w-full text-gray-600">
+    <div className='centered-container'>
+      <div className="login-container">
+      <h1>Registrazione effettuata con successo!</h1>
+      <h2> </h2>
+      <div className="registration-link">
+        <p>Per accedere al tuo nuovo account <a href="/">Login here</a></p>
+      </div>
+      </div>
+
+    </div>);
+  }
+
+
+
+
+
+
+    return (
+        <main className="centered-container w-full h-screen flex flex-col items-center justify-center px-4">
+            <div className="login-container max-w-sm w-full text-gray-600">
                 <div className="text-center">
                     <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
-                    <div className="mt-5 space-y-1">
+                    <div className="login-link mt-5 space-y-1">
                         <h4 className="text-gray-800 text-2xl font-bold sm:text-3xl">Membership of Sport Center</h4>
                         <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl"></h3>
-                        <p className="">Already have an account? <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</a></p>
+                        <p className="registration-link">Already have an account? <a href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</a></p>
                     </div>
                 </div>
                 <form
                     onSubmit={(e) => e.preventDefault()}
                     className="mt-8 space-y-5"
                 >
-                    <div>
+                    <div className="input-container">
                         <label className="font-medium">
                             Email
                         </label>
@@ -25,9 +67,10 @@ export default () => {
                             type="email"
                             required
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div>
+                    <div className="input-container">
                         <label className="font-medium">
                             Password
                         </label>
@@ -35,25 +78,16 @@ export default () => {
                             type="password"
                             required
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-                    <div>
-                        <label className="font-medium">
-                            Confirm Password
-                            </label>
-                            <input
-                                type="Confirm password"
-                                required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                            />
-                        </div>
                     <button
-                        className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                        className="login-button w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
                     >
                         Create account
                     </button>
                 </form>
-                <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+                <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100" onClick={handleRegistration}>
                     <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_17_40)">
                             <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
@@ -74,5 +108,6 @@ export default () => {
     )
 }
 
+export default RegistrationPage;
 
 

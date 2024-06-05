@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Fragment } from 'react'
 import Sidebar from './Sidebar';
 import Footer from './Footer';
@@ -24,7 +24,7 @@ const user = {
     'https://th.bing.com/th/id/R.d2c893f55930c7cb5bfe41538be295d7?rik=RCCbETsRGcm2iQ&pid=ImgRaw&r=0',
 }
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Dashboard', href: '/dashboard', current: true },
   { name: 'Membership', href: '/login', current: false },
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
   { name: 'Swimming', href: '#', current: false },
@@ -41,7 +41,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+function Example({ user }){
+    const [isUserMenuOpen, setUserMenuOpen] = useState(false);
+
+      const toggleUserMenu = () => {
+        setUserMenuOpen(!isUserMenuOpen);
+      };
+
+
   return (
     <>
 
@@ -233,4 +240,5 @@ export default function Example() {
 
   )
   }
+  export default Example;
 
