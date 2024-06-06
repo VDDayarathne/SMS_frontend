@@ -6,7 +6,16 @@ export default () => {
     return(
     <>
 
+    {
+      <React.Fragment>
+      <Sidebar />
+      </React.Fragment>
+    }
+
 <section className="dark:bg-gray-100 dark:text-gray-800">
+
+
+
 	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
 		<a rel="noopener noreferrer" href="https://www.sab.ac.lk/app/department-sports-sciences-and-physical-education-shines-south-asian-youth-table-tennis" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
 			<img src="https://www.sab.ac.lk/app/sites/default/files/gallery-article/1_30.jpg" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
@@ -61,7 +70,7 @@ export default () => {
 {
                   <React.Fragment>
                   <Footer />
-                  <Sidebar />
+
                   </React.Fragment>
                 }
 

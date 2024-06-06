@@ -27,14 +27,14 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
   { name: 'Membership', href: '/login', current: false },
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
-  { name: 'Swimming', href: '#', current: false },
-  { name: 'Fitness', href: '#', current: false },
+  { name: 'Sports', href: '/sports', current: false },
+  { name: 'Inventory', href: '#', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
+  { name: 'Sign out', href: '/logout' },
 ]
 
 function classNames(...classes) {
@@ -57,8 +57,9 @@ function Example({ user }){
       <header className="bg-white shadow">
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-                  <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                     Sabaragamuwa University of Sri Lanka - Sport Center
+                  <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
+                  <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" alt="  " className="h-10 dark:bg-gray-500 mr-6" />
+                        Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>
               </header>

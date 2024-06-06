@@ -10,6 +10,7 @@ import AboutUs from './components/AboutUs';
 import SportShedule from './components/SportShedule';
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
+import Swimming from './components/Swimming';
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -41,6 +42,12 @@ function App() {
               <Route path="/dashboard" element={user? <Dashboard user={user} onLogout={handleLogout} /> : <Redirect to="/" />} />
               <Route path="/sport-shedule" element={<SportShedule />} />
               <Route path="/sidebar" element={user? <Sidebar /> : <Redirect to="/" />} />
+              <Route path="/sports" element={<Swimming />} />
+              <Route path="/login" element={<LoginForm />} />
+              <Route path="/logout" element={<LoginForm />} />
+
+
+
             </Routes>
     </BrowserRouter>
   );

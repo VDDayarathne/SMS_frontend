@@ -269,7 +269,9 @@ const Sidebar = () => {
                       </div>
                       <DropdownMenu.Item asChild className="outline-none">
                         <button className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150">
+                        <a href="/login">
                           Logout
+                          </a>
                         </button>
                       </DropdownMenu.Item>
                     </DropdownMenu.Content>

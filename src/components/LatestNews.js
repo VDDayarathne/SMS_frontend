@@ -52,7 +52,6 @@ export default () => {
                   <React.Fragment>
                   <Footer />
                   <Sidebar />
-
                   </React.Fragment>
                 }
 
