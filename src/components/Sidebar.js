@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Avatar from "@radix-ui/react-avatar";
+import axios from 'axios';
 
-const Sidebar = () => {
 
-    const [email, setEmail] = useState('');
+function Sidebar() {
 
-      useEffect(() => {
-        // You can also fetch the email from a API or a context here
-        const storedEmail = localStorage.getItem('email');
-        if (storedEmail) {
-          setEmail(storedEmail);
-        }
-      }, []);
 
-      const handleLogin = (email) => {
-        setEmail(email);
-        localStorage.setItem('email', email);
-      };
+ const [email, setEmail] = useState('');
+
+   useEffect(() => {
+      axios.get(`http://localhost:8080/api/v1/user/get`)
+       .then(response => {
+          setEmail(response.data.email);
+        })
+       .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
+  const handleLogin = (email) => {
+    setEmail(email);
+    localStorage.setItem('email', email);
+  };
+
 
   const navigation = [
     {
@@ -62,7 +68,7 @@ const Sidebar = () => {
     },
     {
       href: "javascript:void(0)",
-      name: "Plans",
+      name: "My Plan",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +110,7 @@ const Sidebar = () => {
 
   const navsFooter = [
     {
-      href: "javascript:void(0)",
+      href: "/help",
       name: "Help",
       icon: (
         <svg
@@ -234,9 +240,9 @@ const Sidebar = () => {
                   </DropdownMenu.Trigger>
 
                   <DropdownMenu.Portal>
-                    <DropdownMenu.Content className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
-                      <span className="block text-gray-500/80 p-2">
-                        {email}
+                    <DropdownMenu.Content email={email} className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
+                      <span className="block text-gray-500/80 p-2" >
+                      {email}
                       </span>
                       <DropdownMenu.Item asChild className="outline-none">
                         <a
@@ -246,27 +252,14 @@ const Sidebar = () => {
                           Dashboard
                         </a>
                       </DropdownMenu.Item>
-                      <div className="relative rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          className="w-4 h-4 absolute right-1 inset-y-0 my-auto pointer-events-none"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        <select className="w-full cursor-pointer appearance-none bg-transparent p-2 outline-none">
-                          <option disabled selected>
-                            Theme
-                          </option>
-                          <option>Dark</option>
-                          <option>Light</option>
-                        </select>
-                      </div>
+                      <DropdownMenu.Item asChild className="outline-none">
+                          <a
+                            href="#"
+                            className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                          >
+                            Your Profile
+                          </a>
+                        </DropdownMenu.Item>
                       <DropdownMenu.Item asChild className="outline-none">
                         <button className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150">
                         <a href="/login">

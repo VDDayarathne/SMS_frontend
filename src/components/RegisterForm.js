@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import LoginForm from './LoginForm';
 
 
 function RegistrationPage(){
@@ -27,14 +28,20 @@ function RegistrationPage(){
 
   if (registrationSuccess) {
     return (
-    <div className='centered-container'>
-      <div className="login-container">
-      <h1>Registrazione effettuata con successo!</h1>
-      <h2> </h2>
-      <div className="registration-link">
-        <p>Per accedere al tuo nuovo account <a href="/">Login here</a></p>
-      </div>
-      </div>
+    <div className="login-container w-full h-screen flex flex-col items-center justify-center px-4">
+                    <div className="text-center pb-8">
+                        <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
+                        <div className="mt-5">
+                            <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Sport Center</h3>
+                            <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Log in to your account</h3>
+                        </div>
+                    </div>
+                    <button
+                        className="w-full px-2 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                        >
+                    <a href="/login">
+                        Login </a>
+                    </button>
 
     </div>);
   }

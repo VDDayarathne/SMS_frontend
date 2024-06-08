@@ -11,6 +11,14 @@ import SportShedule from './components/SportShedule';
 import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import Swimming from './components/Swimming';
+import WelcomePage from './components/WelcomePage';
+import Inventory from './components/Inventory';
+import AdminDashboard from './components/AdminDashboard';
+import NotificationList from './components/NotificationList';
+import HelpPage from './components/HelpPage';
+
+
+
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -33,7 +41,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-              <Route exact path="/" element={<LoginForm onLogin={handleLogin} />} />
+              <Route exact path="/" element={<WelcomePage />} />
+
               <Route path="/register" element={<RegisterForm />} />
               <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
               <Route path="/about-us" element={<AboutUs />} />
@@ -45,6 +54,12 @@ function App() {
               <Route path="/sports" element={<Swimming />} />
               <Route path="/login" element={<LoginForm />} />
               <Route path="/logout" element={<LoginForm />} />
+              <Route path="/welcome" element={<WelcomePage />} />
+              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/notification" element={<NotificationList />} />
+              <Route path="/help" element={<HelpPage />} />
+
+
 
 
 

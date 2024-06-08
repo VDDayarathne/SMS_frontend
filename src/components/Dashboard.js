@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import FirstPage from './FirstPage';
+import AboutUs from './AboutUs';
+import NotificationList from './NotificationList';
 
 
 import {
@@ -28,7 +30,7 @@ const navigation = [
   { name: 'Membership', href: '/login', current: false },
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
   { name: 'Sports', href: '/sports', current: false },
-  { name: 'Inventory', href: '#', current: false },
+  { name: 'Inventory', href: '/welcome', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
@@ -36,6 +38,9 @@ const userNavigation = [
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '/logout' },
 ]
+
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -49,6 +54,11 @@ function Example({ user }){
       };
 
 
+
+
+
+
+
   return (
     <>
 
@@ -58,7 +68,6 @@ function Example({ user }){
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
                   <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
-                  <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" alt="  " className="h-10 dark:bg-gray-500 mr-6" />
                         Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>
@@ -96,47 +105,12 @@ function Example({ user }){
                         type="button"
                         className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
+                      <a href="/notification">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">View notifications</span>
-                        <BellIcon className="h-6 w-6" aria-hidden="true" />
+                        <BellIcon className="h-6 w-6" aria-hidden="true" /></a>
                       </button>
 
-                      {/* Profile dropdown */}
-                      <Menu as="div" className="relative ml-3">
-                        <div>
-                          <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                            <span className="absolute -inset-1.5" />
-                            <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
-                          </MenuButton>
-                        </div>
-                        <Transition
-                          enter="transition ease-out duration-100"
-                          enterFrom="transform opacity-0 scale-95"
-                          enterTo="transform opacity-100 scale-100"
-                          leave="transition ease-in duration-75"
-                          leaveFrom="transform opacity-100 scale-100"
-                          leaveTo="transform opacity-0 scale-95"
-                        >
-                          <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {userNavigation.map((item) => (
-                              <MenuItem key={item.name}>
-                                {({ focus }) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      focus ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-700'
-                                    )}
-                                  >
-                                    {item.name}
-                                  </a>
-                                )}
-                              </MenuItem>
-                            ))}
-                          </MenuItems>
-                        </Transition>
-                      </Menu>
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">
@@ -221,6 +195,7 @@ function Example({ user }){
                   <React.Fragment>
                   <FirstPage />
                   <Footer />
+                  <Sidebar />
 
                   </React.Fragment>
                 /*
@@ -241,5 +216,5 @@ function Example({ user }){
 
   )
   }
-  export default Example;
+ export default Example;
 

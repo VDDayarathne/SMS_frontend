@@ -10,6 +10,12 @@ module.exports = {
             "./src/components/SportShedule.{js,jsx,html}" ,
             "./src/components/LoginForm.{js,jsx,html}" ,
             "./src/components/Swimming.{js,jsx,html}" ,
+            "./src/components/WelcomePage.{js,jsx,html}" ,
+            "./src/components/Inventory.{js,jsx,html}" ,
+            "./src/components/AdminDashboard.{js,jsx,html}" ,
+            "./src/components/HelpPage.{js,jsx,html}" ,
+
+
             ],
   theme: {
     extend: {},
