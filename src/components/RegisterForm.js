@@ -37,7 +37,7 @@ function RegistrationPage(){
                         </div>
                     </div>
                     <button
-                        className="w-full px-2 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                        className="w-full px-2 py-2 text-white font-medium bg-gray-700 hover:bg-blue-900 active:bg-blue-900 rounded-lg duration-150"
                         >
                     <a href="/login">
                         Login </a>
@@ -89,7 +89,7 @@ function RegistrationPage(){
                         />
                     </div>
                     <button
-                        className="login-button w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                        className="login-button w-full px-4 py-2 text-white font-medium bg-gray-700 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
                         onClick={handleRegistration}
                     >
                         Create account

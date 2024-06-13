@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Avatar from "@radix-ui/react-avatar";
 import axios from 'axios';
-
+import MyPlan from './MyPlan';
+import { AuthContext } from './AuthContext';
+import UserProfile from './UserProfile';
+import SettingsPage from './SettingsPage';
+import LoginForm from './LoginForm';
 
 function Sidebar() {
 
-
+    const { user } = 'useContext(AuthContext)';
  const [email, setEmail] = useState('');
 
    useEffect(() => {
@@ -67,7 +71,7 @@ function Sidebar() {
       ),
     },
     {
-      href: "javascript:void(0)",
+      href: "/myplan",
       name: "My Plan",
       icon: (
         <svg
@@ -130,7 +134,7 @@ function Sidebar() {
       ),
     },
     {
-      href: "javascript:void(0)",
+      href: "/settings",
       name: "Settings",
       icon: (
         <svg
@@ -155,7 +159,7 @@ function Sidebar() {
       ),
     },
     {
-      href: "javascript:void(0)",
+      href: "/login",
       name: "Logout",
       icon: (
         <svg
@@ -254,7 +258,7 @@ function Sidebar() {
                       </DropdownMenu.Item>
                       <DropdownMenu.Item asChild className="outline-none">
                           <a
-                            href="#"
+                            href="/userprofile"
                             className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
                           >
                             Your Profile

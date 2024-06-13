@@ -16,6 +16,12 @@ import Inventory from './components/Inventory';
 import AdminDashboard from './components/AdminDashboard';
 import NotificationList from './components/NotificationList';
 import HelpPage from './components/HelpPage';
+import MyPlan from './components/MyPlan';
+import UserProfile from './components/UserProfile';
+import PrivacyPage from './components/PrivacyPage';
+import SettingsPage from './components/SettingsPage';
+
+
 
 
 
@@ -39,10 +45,10 @@ function App() {
   };
 
   return (
+
     <BrowserRouter>
       <Routes>
               <Route exact path="/" element={<WelcomePage />} />
-
               <Route path="/register" element={<RegisterForm />} />
               <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
               <Route path="/about-us" element={<AboutUs />} />
@@ -58,13 +64,15 @@ function App() {
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/notification" element={<NotificationList />} />
               <Route path="/help" element={<HelpPage />} />
-
-
-
+              <Route path="/myplan" element={<MyPlan />} />
+              <Route path="/userprofile" element={<UserProfile />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
 
 
             </Routes>
     </BrowserRouter>
+
   );
 }
 

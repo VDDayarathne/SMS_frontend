@@ -5,6 +5,8 @@ import Footer from './Footer';
 import FirstPage from './FirstPage';
 import AboutUs from './AboutUs';
 import NotificationList from './NotificationList';
+import AdminDashboard from './AdminDashboard';
+
 
 
 import {
@@ -30,7 +32,7 @@ const navigation = [
   { name: 'Membership', href: '/login', current: false },
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
   { name: 'Sports', href: '/sports', current: false },
-  { name: 'Inventory', href: '/welcome', current: false },
+  { name: 'Inventory', href: '/admin', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
@@ -72,7 +74,7 @@ function Example({ user }){
                   </h1>
                 </div>
               </header>
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className="bg-gray-700">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
