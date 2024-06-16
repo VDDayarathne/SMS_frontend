@@ -4,6 +4,7 @@ import React from 'react';
 export default () => {
     return(
 
+<div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
 <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
 	<h2 className="mb-4 text-2xl font-semibold leading-tight">Invoices</h2>
 	<div className="overflow-x-auto">
@@ -126,6 +127,7 @@ export default () => {
 			</tbody>
 		</table>
 	</div>
+</div>
 </div>
 )
 }

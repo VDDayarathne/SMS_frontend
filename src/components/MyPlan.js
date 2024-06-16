@@ -107,7 +107,9 @@ export default () => {
               });
             </script>
             <div className="mt-10">
-              <button type="submit" className="bg-blue-600 text-white rounded-sm py-2 w-full block" onClick={handleSubmit}>Add</button>
+              <button
+                  class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+                  type="button" onClick={handleSubmit}>Add</button>
             </div>
           </form>
         </div>

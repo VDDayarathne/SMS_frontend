@@ -1,55 +1,77 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import LoginForm from './LoginForm';
-
+import UserService from "./service/UserService";
+import { useNavigate } from 'react-router-dom';
 
 function RegistrationPage(){
-    const [username, setUserName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        role: '',
+        password: '',
+        faculty: '',
+        bio: '',
+        indexnumber: ''
+    });
     const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
-    const handleRegistration = async () => {
-            try {
-            const userData = {
-                username,
-                email,
-                password
-            };
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-            const response = await axios.post('http://localhost:8080/api/v1/user/add', userData);
-            console.log('User registered:', response.data);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            // Call the register method from UserService
+            const token = localStorage.getItem('token');
+            await UserService.register(formData, token);
 
-            } catch (error) {
-              console.error('Registration error:', error);
-            }
+            // Clear the form fields after successful registration
+            setFormData({
+                name: '',
+                email: '',
+                password: '',
+                role: '',
+                password: '',
+                faculty: '',
+                bio: '',
+                indexnumber: ''
+            });
             setRegistrationSuccess(true);
-          };
+            alert('User registered successfully');
+            navigate('/login');
 
-  if (registrationSuccess) {
-    return (
-    <div className="login-container w-full h-screen flex flex-col items-center justify-center px-4">
-                    <div className="text-center pb-8">
-                        <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
-                        <div className="mt-5">
-                            <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Sport Center</h3>
-                            <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Log in to your account</h3>
-                        </div>
+        } catch (error) {
+            console.error('Error registering user:', error);
+            alert('An error occurred while registering user');
+        }
+    };
+
+    if (registrationSuccess) {
+        return (
+            <div className="login-container w-full h-screen flex flex-col items-center justify-center px-4">
+                <div className="text-center pb-8">
+                    <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
+                    <div className="mt-5">
+                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Sport Center</h3>
+                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Log in to your account</h3>
                     </div>
-                    <button
-                        className="w-full px-2 py-2 text-white font-medium bg-gray-700 hover:bg-blue-900 active:bg-blue-900 rounded-lg duration-150"
-                        >
+                </div>
+                <button
+                    className="w-full px-2 py-2 text-white font-medium bg-gray-700 hover:bg-blue-900 active:bg-blue-900 rounded-lg duration-150"
+                    >
                     <a href="/login">
-                        Login </a>
-                    </button>
+                        Login
+                    </a>
+                </button>
 
-    </div>);
-  }
-
-
-
-
-
+            </div>
+        );
+    }
 
     return (
         <main className="centered-container w-full h-screen flex flex-col items-center justify-center px-4">
@@ -63,7 +85,7 @@ function RegistrationPage(){
                     </div>
                 </div>
                 <form
-                    onSubmit={(e) => e.preventDefault()}
+                    onSubmit={handleSubmit}
                     className="mt-8 space-y-5"
                 >
                     <div className="input-container">
@@ -74,7 +96,7 @@ function RegistrationPage(){
                             type="email"
                             required
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                            onChange={(e) => setEmail(e.target.value)}
+                            name="email" value={formData.email} onChange={handleInputChange} required
                         />
                     </div>
                     <div className="input-container">
@@ -85,12 +107,66 @@ function RegistrationPage(){
                             type="password"
                             required
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                            onChange={(e) => setPassword(e.target.value)}
+                            name="password" value={formData.password} onChange={handleInputChange} required
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label className="font-medium">
+                            Name
+                        </label>
+                        <input
+                            type="name"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            name="name" value={formData.name} onChange={handleInputChange} required
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label className="font-medium">
+                            Faculty
+                        </label>
+                        <input
+                            type="faculty"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            name="faculty" value={formData.faculty} onChange={handleInputChange} required
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label className="font-medium">
+                            Index Number
+                        </label>
+                        <input
+                            type="indexnumber"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            name="indexnumber" value={formData.indexnumber} onChange={handleInputChange} required
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label className="font-medium">
+                            Bio
+                        </label>
+                        <input
+                            type="bio"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            name="bio" value={formData.bio} onChange={handleInputChange} required
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label className="font-medium">
+                            Role
+                        </label>
+                        <input
+                            type="role"
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            name="role" value={formData.role} onChange={handleInputChange} required
                         />
                     </div>
                     <button
                         className="login-button w-full px-4 py-2 text-white font-medium bg-gray-700 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
-                        onClick={handleRegistration}
                     >
                         Create account
                     </button>
@@ -117,5 +193,3 @@ function RegistrationPage(){
 }
 
 export default RegistrationPage;
-
-

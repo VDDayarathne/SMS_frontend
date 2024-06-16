@@ -11,6 +11,7 @@ function Swimming() {
               <Sidebar />
               </React.Fragment>
             }
+            <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
       <section className="relative overflow-hidden py-20">
         <div className="container mx-auto p-4">
           <h5 className="text-2xl font-bold mb-2">LeagueSabra</h5>
@@ -88,7 +89,7 @@ function Swimming() {
           </div>
         </div>
       </section>
-
+        </div>
       {
                     <React.Fragment>
                     <Footer />

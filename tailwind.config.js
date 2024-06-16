@@ -15,10 +15,11 @@ module.exports = {
             "./src/components/AdminDashboard.{js,jsx,html}" ,
             "./src/components/HelpPage.{js,jsx,html}" ,
             "./src/components/MyPlan.{js,jsx,html}" ,
-            "./src/components/UserProfile.{js,jsx,html}" ,
+            "./src/components/UpdateProfile.{js,jsx,html}" ,
             "./src/components/PrivacyPage.{js,jsx,html}" ,
             "./src/components/SettingsPage.{js,jsx,html}" ,
-
+            "./src/components/Profile.{js,jsx,html}" ,
+            "./src/components/TermsPage.{js,jsx,html}" ,
             ],
   theme: {
     extend: {},

@@ -1,29 +1,40 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-
+import UserService from "./service/UserService";
 
 
 
 function LoginForm({ onLogin }) {
 
-     const [email, setEmail] = useState('');
-      const navigate = useNavigate();
-      const [password, setPassword] = useState('');
+     const [email, setEmail] = useState('')
+     const [password, setPassword] = useState('')
+     const [error, setError] = useState('')
+     const navigate = useNavigate();
 
-      const handleLogin = async () => {
-        try {
-          const url = `http://localhost:8080/api/v1/user/get?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
-          const response = await axios.get(url);
-          const userData = response.data;
+     const handleSubmit = async (e) => {
+         e.preventDefault();
 
-          onLogin(userData);
-                navigate('/dashboard', { replace: true });
+         try {
+             const userData = await UserService.login(email, password)
+             console.log(userData)
+             if (userData.token) {
+                 localStorage.setItem('token', userData.token)
+                 navigate('/dashboard')
+             }else{
+                 setError(userData.message)
+             }
 
-        } catch (error) {
-          console.error('Login error:', error);
-        }
-      };
+         } catch (error) {
+             console.log(error)
+             setError(error.message)
+             setTimeout(()=>{
+                 setError('');
+             }, 5000);
+         }
+     }
+
+
 
 
     return (
@@ -72,11 +83,11 @@ function LoginForm({ onLogin }) {
                             </label>
                             <span>Remember me</span>
                         </div>
-                        <a href="javascript:void(0)" className="text-center text-bg-gray-700 hover:text-bg-gray-700">Forgot password?</a>
+                        <a href="#" className="text-center text-bg-gray-700 hover:text-bg-gray-700">Forgot password?</a>
                     </div>
                     <button
                         className="w-full px-4 py-2 text-white font-medium bg-gray-700 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
-                        onClick={handleLogin}
+                        onClick={handleSubmit}
                     >
                         Sign in
                     </button>

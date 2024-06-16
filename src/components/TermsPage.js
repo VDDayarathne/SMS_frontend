@@ -1,7 +1,12 @@
 import React from 'react';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 export default function TermsOfServicePage() {
   return (
+  <>
+  <Sidebar />
+  <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
     <div className="bg-white">
       <div className="mb-16"></div>
       <div className="container mx-auto">
@@ -18,5 +23,9 @@ export default function TermsOfServicePage() {
         </div>
       </div>
     </div>
+    </div>
+
+    <Footer />
+    </>
   );
 }

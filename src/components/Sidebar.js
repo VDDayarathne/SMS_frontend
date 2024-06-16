@@ -3,35 +3,17 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import * as Avatar from "@radix-ui/react-avatar";
 import axios from 'axios';
 import MyPlan from './MyPlan';
-import { AuthContext } from './AuthContext';
-import UserProfile from './UserProfile';
+import Profile from './Profile';
 import SettingsPage from './SettingsPage';
 import LoginForm from './LoginForm';
 
 function Sidebar() {
 
-    const { user } = 'useContext(AuthContext)';
- const [email, setEmail] = useState('');
-
-   useEffect(() => {
-      axios.get(`http://localhost:8080/api/v1/user/get`)
-       .then(response => {
-          setEmail(response.data.email);
-        })
-       .catch(error => {
-          console.error(error);
-        });
-    }, []);
-
-  const handleLogin = (email) => {
-    setEmail(email);
-    localStorage.setItem('email', email);
-  };
 
 
   const navigation = [
     {
-      href: "javascript:void(0)",
+      href: "#",
       name: "Overview",
       icon: (
         <svg
@@ -51,7 +33,7 @@ function Sidebar() {
       ),
     },
     {
-      href: "javascript:void(0)",
+      href: "#",
       name: "Integration",
       icon: (
         <svg
@@ -91,7 +73,7 @@ function Sidebar() {
       ),
     },
     {
-      href: "javascript:void(0)",
+      href: "#",
       name: "Transactions",
       icon: (
         <svg
@@ -185,7 +167,7 @@ function Sidebar() {
       <nav className="fixed top-0 left-0 w-20 h-full border-r bg-white space-y-8">
         <div className="flex flex-col h-full">
           <div className="h-20 flex items-center justify-center px-8">
-            <a href="javascript:void(0)" className="flex-none">
+            <a href="#" className="flex-none">
               <img
                 src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png"
                 width={35}
@@ -244,9 +226,9 @@ function Sidebar() {
                   </DropdownMenu.Trigger>
 
                   <DropdownMenu.Portal>
-                    <DropdownMenu.Content email={email} className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
+                    <DropdownMenu.Content className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
                       <span className="block text-gray-500/80 p-2" >
-                      {email}
+                      email
                       </span>
                       <DropdownMenu.Item asChild className="outline-none">
                         <a

@@ -6,8 +6,11 @@ import Footer from './Footer';
 
 export default function HelpPage() {
   return (
+
     <div className="bg-white">
     <Sidebar />
+
+    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
       <div className="mb-16"></div>
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto bg-white shadow-md rounded-md p-8">
@@ -33,6 +36,7 @@ export default function HelpPage() {
             </p>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
 

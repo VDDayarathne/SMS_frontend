@@ -11,7 +11,7 @@ export default () => {
       <Sidebar />
       </React.Fragment>
     }
-
+<div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
 <section className="dark:bg-gray-100 dark:text-gray-800">
 
 
@@ -66,6 +66,7 @@ export default () => {
 		</div>
 	</div>
 </section>
+</div>
 
 {
                   <React.Fragment>

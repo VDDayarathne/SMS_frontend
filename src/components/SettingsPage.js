@@ -15,6 +15,7 @@ export default function SettingsPage() {
 
     return (
     <><Sidebar />
+    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
         <div className="bg-white">
             <div className="mb-16"></div>
             <div className="container mx-auto">
@@ -54,6 +55,7 @@ export default function SettingsPage() {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
         <Footer />
         </>

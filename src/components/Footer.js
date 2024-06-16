@@ -1,5 +1,6 @@
 import React from 'react';
 import PrivacyPage from './PrivacyPage';
+import TermsPage from './TermsPage';
 
 
 export default () => {
@@ -47,7 +48,7 @@ export default () => {
 						<a rel="noopener noreferrer" href="/privacy">Privacy</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Terms of Service</a>
+						<a rel="noopener noreferrer" href="terms">Terms of Service</a>
 					</li>
 				</ul>
 			</div>

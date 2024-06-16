@@ -1,11 +1,66 @@
-import React, { useState } from "react";
-/*import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";*/
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import Profile from './Profile';
+import UserService from "./service/UserService";
 
-function App() {
-  const [count, setCount] = useState(0);
+function UpdateUser() {
+  const navigate = useNavigate();
+  const { userId } = useParams();
+
+
+  const [userData, setUserData] = useState({
+    name: '',
+    bio: '',
+    email: '',
+    indexnumber: '',
+    faculty: '',
+    role: ''
+
+  });
+
+  useEffect(() => {
+    fetchUserDataById(userId); // Pass the userId to fetchUserDataById
+  }, [userId]); //wheen ever there is a chane in userId, run this
+
+  const fetchUserDataById = async (userId) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await UserService.getUserById(userId, token); // Pass userId to getUserById
+      const { name, bio, email, indexnumber, faculty, role } = response.ourUsers;
+      setUserData({ name, bio, email, indexnumber, faculty, role });
+      console.log('User id fetched:', userId);
+    } catch (error) {
+      console.error('Error fetching user data:', error);
+    }
+  };
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prevUserData) => ({
+      ...prevUserData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const token = localStorage.getItem('token');
+      const res = await UserService.updateUser(userId, userData, token);
+      console.log(res);
+      // Redirect to profile page or display a success message
+      navigate("/userprofile");
+    } catch (error) {
+      console.error('Error updating user profile:', error);
+      alert(error);
+    }
+  };
+
+
+
 
   return (
     <>
@@ -14,8 +69,8 @@ function App() {
               <div className="flex justify-between container mx-auto">
                 <div className="w-full">
                   <div className="mt-4 px-4">
-                    <h1 className="text-3xl font-semibold py-7 px-5">Sabaragamuva Sports Center</h1>
-                    <h1 className="font-thinner flex text-4xl pt-10 px-5">Setup Your profile</h1>
+                    <h1 className="text-3xl font-semibold py-7 px-5">Sports Center - Sabaragamuwa University of Sri Lanka</h1>
+                    <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Setup Your profile</h1>
 
                     <div className="flex justify-center mt-5">
                       <label htmlFor="profile-picture-upload" className="relative cursor-pointer">
@@ -40,30 +95,17 @@ function App() {
                         <input
                           className="w-full bg-transparent p-0 text-sm text-gray-500 focus:outline-none"
                           id="name"
+                          name="name" value={userData.name} onChange={handleInputChange}
                           type="text"
-                          placeholder="First name"
+                          placeholder="name"
                         />
                       </label>
-                      <div className="mt-5">
-                        <label className="input-field inline-flex items-baseline border-2 border-black rounded p-4">
-                          <span className="flex-none text-dusty-blue-darker select-none leading-none"></span>
-                          <div className="flex-1 leading-none">
-                            <input
-                              id="handle"
-                              type="text"
-                              className="w-full pl-1 bg-transparent focus:outline-none"
-                              name="handle"
-                              placeholder="Last name"
-                            />
-                          </div>
-                        </label>
-                      </div>
                       <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="bio">
                         <span className="text-md font-semibold text-zinc-900">Bio</span>
                         <input
                           className="w-full p-0 text-sm border-none bg-transparent text-gray-500 focus:outline-none"
                           id="bio"
-                          type="text"
+                          type="text" name="bio" value={userData.bio} onChange={handleInputChange}
                           placeholder="Write Your Bio"
                         />
                       </label>
@@ -72,7 +114,7 @@ function App() {
                         <input
                           className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
                           id="upi"
-                          type="text"
+                          type="email" name="email" value={userData.email} onChange={handleInputChange}
                           placeholder="ie: example@gmail.com"
                         />
                       </label>
@@ -81,7 +123,7 @@ function App() {
                         <input
                           className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
                           id="paypal"
-                          type="text"
+                          type="text" name="faculty" value={userData.faculty} onChange={handleInputChange}
                         />
                       </label>
                       <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="paypal">
@@ -89,12 +131,18 @@ function App() {
                         <input
                           className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
                           id="paypal"
-                          type="text"
+                          type="text" name="indexnumber" value={userData.indexnumber} onChange={handleInputChange}
                         />
-                      </label>
-                      <button className="mt-5 border-2 px-5 py-2 rounded-lg border-black font-black translate-y-2 ">
-                        Submit
-                      </button>
+                      </label><br /><br />
+                      <div class="mb-6 text-center">
+                          <button
+                              class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+                              type="button"
+                              onClick={handleSubmit}
+                          >
+                              Submit
+                          </button>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -105,4 +153,4 @@ function App() {
   );
 }
 
-export default App;
+export default UpdateUser;

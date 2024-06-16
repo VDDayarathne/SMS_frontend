@@ -6,6 +6,7 @@ import Sidebar from './Sidebar';
 function SportShedule() {
   return (
     <>
+    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
       <section className="bg-white py-20">
         <div className="container mx-auto p-4">
           <h5 className="text-3xl font-bold mb-4">LeagueSabra</h5>
@@ -154,7 +155,7 @@ function SportShedule() {
           </div>
         </div>
       </section>
-
+      </div>
 
       { <React.Fragment>
             <Footer />

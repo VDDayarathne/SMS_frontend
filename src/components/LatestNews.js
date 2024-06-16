@@ -7,8 +7,8 @@ export default () => {
     return(
 
 <>
-
-<ul className="p-4 lg:p-8 dark:bg-gray-100 dark:text-gray-800">
+<div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+<ul className="p-4 lg:p-8S justify-center dark:bg-gray-100 dark:text-gray-800">
 	<li>
 		<article>
         			<a rel="noopener noreferrer" href="https://www.sab.ac.lk/app/department-sports-sciences-and-physical-education-shines-south-asian-youth-table-tennis" className="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-50">
@@ -54,6 +54,7 @@ export default () => {
                   <Sidebar />
                   </React.Fragment>
                 }
+                </div>
 
 </>
 

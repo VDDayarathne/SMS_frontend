@@ -17,10 +17,11 @@ import AdminDashboard from './components/AdminDashboard';
 import NotificationList from './components/NotificationList';
 import HelpPage from './components/HelpPage';
 import MyPlan from './components/MyPlan';
-import UserProfile from './components/UserProfile';
+import UpdateProfile from './components/UpdateProfile';
 import PrivacyPage from './components/PrivacyPage';
 import SettingsPage from './components/SettingsPage';
-
+import Profile from './components/Profile';
+import TermsPage from './components/TermsPage';
 
 
 
@@ -65,10 +66,11 @@ function App() {
               <Route path="/notification" element={<NotificationList />} />
               <Route path="/help" element={<HelpPage />} />
               <Route path="/myplan" element={<MyPlan />} />
-              <Route path="/userprofile" element={<UserProfile />} />
+              <Route path="/userprofile" element={<Profile />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/settings" element={<SettingsPage />} />
-
+              <Route path="/updateprofile/:userId" element={<UpdateProfile />} />
+              <Route path="/terms" element={<TermsPage />} />
 
             </Routes>
     </BrowserRouter>

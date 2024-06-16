@@ -6,6 +6,7 @@ const AboutUs = () => {
   return (
   <>
   <Sidebar />
+  <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
     <div className="py-16 bg-whit items-center justify-center "  >
           <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6 ">
             <h1 className="text-4xl text-center text-gray-900 font-bold mb-8">About Us</h1>
@@ -73,6 +74,7 @@ const AboutUs = () => {
               </ul>
             </section>
           </div>
+        </div>
         </div>
         <Footer />
         </>
