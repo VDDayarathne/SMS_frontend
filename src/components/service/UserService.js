@@ -82,7 +82,32 @@ class UserService{
         }catch(err){
             throw err;
         }
+
     }
+
+    static async createEvent(eventData, token){
+        try{
+            const response = await axios.post(`${UserService.BASE_URL}/adminuser/create-event`, eventData, {
+                headers: {Authorization: `Bearer ${token}`}
+            })
+            return response.data;
+
+        }catch(err){
+            throw err;
+        }
+    }
+
+    static async getEvents(token){
+            try{
+                const response = await axios.get(`${UserService.BASE_URL}/adminuser/get-events`,
+                {
+                    headers: {Authorization: `Bearer ${token}`}
+                })
+                return response.data;
+            }catch(err){
+                throw err;
+            }
+        }
 
     /**AUTHENTICATION CHECKER */
     static logout(){
