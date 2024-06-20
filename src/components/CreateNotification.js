@@ -3,7 +3,6 @@ import axios from 'axios';
 import UserService from "./service/UserService";
 
 function CreateNotification(){
-  const [notifications, setNotifications] = useState([]);
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
   const token = localStorage.getItem('token');
@@ -36,8 +35,7 @@ function CreateNotification(){
               type="text"
               id="title"
               name="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={title} onChange={(e) => setTitle(e.target.value)}
               className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
             />
           </div>
@@ -50,8 +48,7 @@ function CreateNotification(){
               id="description"
               name="description"
               rows="4"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={message} onChange={(e) => setMessage(e.target.value)}
               className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
             />
           </div>
@@ -60,10 +57,10 @@ function CreateNotification(){
         <div className="mt-10">
           <button
             className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
-            type="button"
+            type="submit"
             onClick={handleSubmit}
           >
-            Add
+            Create Notification
           </button>
         </div>
       </form>

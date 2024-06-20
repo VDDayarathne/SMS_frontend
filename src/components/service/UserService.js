@@ -110,18 +110,17 @@ class UserService{
             }
         }
 
-    static async createNotification(notificationData, token) {
-        try {
-          const response = await axios.post(`${UserService.BASE_URL}/admin/create-notification`, notificationData, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
-          return response.data;
-        } catch (err) {
-          throw err;
+      static async createNotification(notification, token) {
+          try {
+            const response = await axios.post(`${UserService.BASE_URL}/admin/create-notifications`, notification, {
+              headers: { Authorization: `Bearer ${token}` },
+            });
+            return response.data;
+          } catch (err) {
+            throw err;
+          }
         }
-      }
+
 
       static async getNotifications(token) {
         try {
