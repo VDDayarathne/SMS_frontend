@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 class UserService{
     static BASE_URL = "http://localhost:8080"
 
@@ -108,6 +109,48 @@ class UserService{
                 throw err;
             }
         }
+
+    static async createNotification(notificationData, token) {
+        try {
+          const response = await axios.post(`${UserService.BASE_URL}/admin/create-notification`, notificationData, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+
+      static async getNotifications(token) {
+        try {
+          const response = await axios.get(`${UserService.BASE_URL}/adminuser/get-notifications`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+      static async deleteNotification(notificationId, token) {
+        try {
+          const response = await axios.delete(`${UserService.BASE_URL}/admin/delete-notifications/${notificationId}`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+
+
+
+
+
+
 
     /**AUTHENTICATION CHECKER */
     static logout(){

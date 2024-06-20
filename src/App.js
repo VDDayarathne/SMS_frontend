@@ -22,6 +22,8 @@ import PrivacyPage from './components/PrivacyPage';
 import SettingsPage from './components/SettingsPage';
 import Profile from './components/Profile';
 import TermsPage from './components/TermsPage';
+import CreateNotification from './components/CreateNotification';
+
 
 
 
@@ -71,6 +73,8 @@ function App() {
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/updateprofile/:userId" element={<UpdateProfile />} />
               <Route path="/terms" element={<TermsPage />} />
+              <Route path="/createnotification" element={<CreateNotification />} />
+
 
             </Routes>
     </BrowserRouter>

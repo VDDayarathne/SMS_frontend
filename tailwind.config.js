@@ -20,6 +20,7 @@ module.exports = {
             "./src/components/SettingsPage.{js,jsx,html}" ,
             "./src/components/Profile.{js,jsx,html}" ,
             "./src/components/TermsPage.{js,jsx,html}" ,
+            "./src/components/CreateNotification.{js,jsx,html}" ,
             ],
   theme: {
     extend: {},
