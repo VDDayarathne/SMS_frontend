@@ -12,7 +12,7 @@ function Sidebar() {
 
 
   const navigation = [
-    {
+    /*{
       href: "#",
       name: "Overview",
       icon: (
@@ -31,8 +31,8 @@ function Sidebar() {
           />
         </svg>
       ),
-    },
-    {
+    },*/
+    /*{
       href: "#",
       name: "Integration",
       icon: (
@@ -51,7 +51,7 @@ function Sidebar() {
           />
         </svg>
       ),
-    },
+    },*/
     {
       href: "/myplan",
       name: "My Plan",
@@ -72,7 +72,7 @@ function Sidebar() {
         </svg>
       ),
     },
-    {
+    /*{
       href: "#",
       name: "Transactions",
       icon: (
@@ -91,7 +91,7 @@ function Sidebar() {
           />
         </svg>
       ),
-    },
+    },*/
   ];
 
   const navsFooter = [

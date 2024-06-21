@@ -145,6 +145,15 @@ class UserService{
         }
       }
 
+      static async getNews() {
+          try {
+            const response = await axios.get(`${UserService.BASE_URL}/adminuser/latest-news`);
+            return response.data;
+          } catch (error) {
+            throw error;
+          }
+        }
+
 
 
 
