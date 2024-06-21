@@ -23,7 +23,7 @@ import SettingsPage from './components/SettingsPage';
 import Profile from './components/Profile';
 import TermsPage from './components/TermsPage';
 import CreateNotification from './components/CreateNotification';
-
+import CreateNews from './components/CreateNews';
 
 
 
@@ -74,6 +74,7 @@ function App() {
               <Route path="/updateprofile/:userId" element={<UpdateProfile />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/createnotification" element={<CreateNotification />} />
+              <Route path="/createnews" element={<CreateNews />} />
 
 
             </Routes>

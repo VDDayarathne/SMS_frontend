@@ -3,31 +3,32 @@ import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
 
-function CreateNotification(){
+function CreateNews(){
   const [title, setTitle] = useState('');
-  const [message, setMessage] = useState('');
+  const [description, setDescription] = useState('');
   const token = localStorage.getItem('token');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newNotification = { title, message };
+    const newNews = { title, description };
     try {
-      const response = await UserService.createNotification(newNotification, token);
+      const response = await UserService.createNews(newNews, token);
       console.log(response.data);
       setTitle('');
-      setMessage('');
+      setDescription('');
     } catch (error) {
       console.error(error);
     }
   };
 
 
+
   return (
   <>
     <div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Add Notifications</h1>
-        <p className="mt-3 text-lg text-gray-600">Add Notification</p>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Add News</h1>
+        <p className="mt-3 text-lg text-gray-600">Add News</p>
       </div>
       <form className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="sm:col-span-2">
@@ -50,7 +51,7 @@ function CreateNotification(){
               id="description"
               name="description"
               rows="4"
-              value={message} onChange={(e) => setMessage(e.target.value)}
+              value={description} onChange={(e) => setDescription(e.target.value)}
               className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
             />
           </div>
@@ -62,14 +63,16 @@ function CreateNotification(){
             type="submit"
             onClick={handleSubmit}
           >
-            Create Notification
+            Create News
           </button>
         </div>
       </form>
     </div>
+
     <Footer />
     </>
+
   );
 };
 
-export default CreateNotification;
+export default CreateNews;
