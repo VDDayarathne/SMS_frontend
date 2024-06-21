@@ -168,10 +168,18 @@ class UserService{
         }
       }
 
-
-
-
-
+    static async getTournaments(token) {
+      try {
+        const response = await axios.get(`${UserService.BASE_URL}/adminuser/get-tournaments`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        return response.data;
+      } catch (err) {
+        return { error: 'Failed to retrieve tournaments', message: err.message };
+      }
+    }
 
 
     /**AUTHENTICATION CHECKER */
