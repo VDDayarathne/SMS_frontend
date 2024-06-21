@@ -37,7 +37,7 @@ export default function Example() {
               <div className="flex-col">
                   <h2 className="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-800">Events and Tournaments</h2>
                   <p className="flex-1 mb-4 text-base leading-relaxed dark:text-gray-600">There's no sense in going to a tournament if you don't believe that you can win it.</p>
-                  <a className="inline-flex items-center space-x-2 text-sm dark:text-violet-600" href="/components">
+                  <a className="inline-flex items-center space-x-2 text-sm dark:text-violet-600" href="/createtournament">
 
 
                       <button className="px-8 py-3 m-2 text-lg bg-gray-700 border rounded dark:text-white dark:border-gray-300">Modify</button>

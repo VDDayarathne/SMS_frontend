@@ -24,6 +24,7 @@ import Profile from './components/Profile';
 import TermsPage from './components/TermsPage';
 import CreateNotification from './components/CreateNotification';
 import CreateNews from './components/CreateNews';
+import CreateEventsAndTournaments from './components/CreateEventsAndTournaments';
 
 
 
@@ -75,6 +76,7 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/createnotification" element={<CreateNotification />} />
               <Route path="/createnews" element={<CreateNews />} />
+              <Route path="/createtournament" element={<CreateEventsAndTournaments />} />
 
 
             </Routes>

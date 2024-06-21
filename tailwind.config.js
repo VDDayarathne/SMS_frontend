@@ -22,6 +22,7 @@ module.exports = {
             "./src/components/TermsPage.{js,jsx,html}" ,
             "./src/components/CreateNotification.{js,jsx,html}" ,
             "./src/components/CreateNews.{js,jsx,html}" ,
+            "./src/components/CreateEventsAndTournaments.{js,jsx,html}" ,
             ],
   theme: {
     extend: {},
