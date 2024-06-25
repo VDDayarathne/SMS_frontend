@@ -36,11 +36,8 @@ return(
     }
 <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
 <section className="dark:bg-gray-100 dark:text-gray-800">
-
-
-
-	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-		<a rel="noopener noreferrer" href="https://www.sab.ac.lk/app/department-sports-sciences-and-physical-education-shines-south-asian-youth-table-tennis" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
+    <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+		<div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline dark:bg-gray-50">
 		<ul>
 		{tournaments.map((tournament, index) => (
 		<li key={index}>
@@ -52,7 +49,7 @@ return(
 			</li>
 			 ))}
 		  </ul>
-		</a>
+		</div>
 		<div className="flex justify-center">
 			<button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
 		</div>

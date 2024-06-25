@@ -6,6 +6,9 @@ import FirstPage from './FirstPage';
 import AboutUs from './AboutUs';
 import NotificationList from './NotificationList';
 import AdminDashboard from './AdminDashboard';
+import Profile from './Profile';
+import SettingsPage from './SettingsPage';
+import LoginForm from './LoginForm';
 
 
 
@@ -21,24 +24,24 @@ import {
 } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const user = {
+/*const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
   imageUrl:
     'https://th.bing.com/th/id/R.d2c893f55930c7cb5bfe41538be295d7?rik=RCCbETsRGcm2iQ&pid=ImgRaw&r=0',
-}
+}*/
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
-  { name: 'Membership', href: '/login', current: false },
+  /*{ name: 'Membership', href: '/login', current: false },*/
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
   { name: 'Sports', href: '/sports', current: false },
   { name: 'Inventory', href: '/admin', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '/logout' },
+  { name: 'Your Profile', href: '/userprofile' },
+  { name: 'Settings', href: '/settings' },
+  { name: 'Sign out', href: '/login' },
 ]
 
 
@@ -149,13 +152,8 @@ function Example({ user }){
                 </div>
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
-                    <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                    </div>
-                    <div className="ml-3">
-                      <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                      <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
-                    </div>
+
+
                     <button
                       type="button"
                       className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

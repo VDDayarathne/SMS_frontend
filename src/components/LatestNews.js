@@ -32,11 +32,11 @@ import UserService from "./service/UserService";
 	{news.map((newsItem) => (
 	<li key={newsItem.index}>
 		<article>
-            <a rel="noopener noreferrer" href="https://www.sab.ac.lk/app/department-sports-sciences-and-physical-education-shines-south-asian-youth-table-tennis" className="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-50">
+            <div className="grid p-4 overflow-hidden md:grid-cols-5 rounded-xl lg:p-6 xl:grid-cols-12 hover:dark:bg-gray-50">
                 <h3 className="mb-1 ml-8 font-semibold md:col-start-2 md:col-span-4 md:ml-0 xl:col-start-3 xl:col-span-9">{newsItem.title}</h3>
                 <time datetime="" className="row-start-1 mb-1 md:col-start-1 xl:col-span-2 dark:text-gray-600">{newsItem.createdAt}</time>
                 <p className="ml-8 md:col-start-2 md:col-span-4 xl:col-start-3 xl:col-span-9 md:ml-0 dark:text-gray-700">{newsItem.description}</p>
-                </a>
+            </div>
         </article>
 	</li>
 	))}

@@ -72,23 +72,7 @@ function UpdateUser() {
                     <h1 className="text-3xl font-semibold py-7 px-5">Sports Center - Sabaragamuwa University of Sri Lanka</h1>
                     <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Setup Your profile</h1>
 
-                    <div className="flex justify-center mt-5">
-                      <label htmlFor="profile-picture-upload" className="relative cursor-pointer">
-                        <img
-                          src={""}
-                          alt="Profile"
-                          className="w-full h-full md:w-80 md:h-80 rounded-full border-4 border-black object-cover"
-                        />
-                        <input
-                          id="profile-picture-upload"
-                          type="file"
-                          accept="image/*"
-                          className="absolute inset-100 w-full h-full opacity-50 cursor-pointer"
 
-                        />
-                      </label>
-                    </div>
-                    <br /><br />
                     <form className="mx-5 my-5">
                       <label className="relative block p-3 border-2 border-black rounded" htmlFor="name">
                         <span className="text-md font-semibold text-zinc-900">Name</span>
