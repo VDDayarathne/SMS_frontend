@@ -41,6 +41,16 @@ function CreateNotification(){
       }
     };
 
+    const handleDeleteNotification = async (notificationId) => {
+      try {
+        const token = localStorage.getItem('token');
+        await UserService.deleteNotification(notificationId, token);
+        setNotifications(notifications.filter((notification) => notification.id !== notificationId));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
 
 
 
@@ -124,7 +134,9 @@ function CreateNotification(){
                         </td>
 
                         <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                            <a href="#" class="ml-2 text-red-600 hover:text-red-900">Delete</a>
+                            <a href="#" class="ml-2 text-red-600 hover:text-red-900"
+                            onClick={() => handleDeleteNotification(notification.id)}>
+                            Delete</a>
                         </td>
                     </tr>
                     ))}

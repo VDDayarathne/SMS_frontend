@@ -110,6 +110,18 @@ class UserService{
             }
         }
 
+       static async deleteEvent(eventId, token) {
+         try {
+           const response = await axios.delete(`${UserService.BASE_URL}/adminuser/delete-event/${eventId}`, {
+             headers: { Authorization: `Bearer ${token}` }
+           });
+           return response.data;
+         } catch (err) {
+           throw err;
+         }
+       }
+
+
       static async createNotification(notification, token) {
           try {
             const response = await axios.post(`${UserService.BASE_URL}/admin/create-notifications`, notification, {
@@ -168,6 +180,18 @@ class UserService{
         }
       }
 
+      static async deleteNews(newsId, token) {
+        try {
+          const response = await axios.delete(`${UserService.BASE_URL}/admin/delete-news/${newsId}`, {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+
+
     static async getTournaments(token) {
       try {
         const response = await axios.get(`${UserService.BASE_URL}/adminuser/get-tournaments`, {
@@ -187,6 +211,18 @@ class UserService{
           headers: {
             Authorization: `Bearer ${token}`,
           },
+        });
+        return response.data;
+      } catch (err) {
+        throw err;
+      }
+    }
+
+    static async deleteTournament(tournamentId, token) {
+      try {
+        const response = await axios.delete(`${UserService.BASE_URL}/admin/delete-tournament/${tournamentId}`, {
+          headers: {
+            Authorization: `Bearer ${token}` }
         });
         return response.data;
       } catch (err) {

@@ -43,6 +43,16 @@ function CreateEventsAndTournaments(){
       }
     };
 
+    const handleDeleteTournament = async (tournamentId) => {
+      try {
+        const token = localStorage.getItem('token');
+        await UserService.deleteTournament(tournamentId, token);
+        setTournaments(tournaments.filter((tournament) => tournament.id !== tournamentId));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
 
 
 
@@ -132,7 +142,10 @@ function CreateEventsAndTournaments(){
                             </td>
 
                             <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                                <a href="#" class="ml-2 text-red-600 hover:text-red-900">Delete</a>
+                                <a href="#" class="ml-2 text-red-600 hover:text-red-900"
+                                onClick={() => handleDeleteTournament(tournament.id)}
+                                >
+                                Delete</a>
                             </td>
                         </tr>
                         ))}
