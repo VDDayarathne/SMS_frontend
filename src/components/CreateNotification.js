@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
@@ -20,6 +20,31 @@ function CreateNotification(){
       console.error(error);
     }
   };
+
+  const [notifications, setNotifications] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      fetchNotifications();
+    }, [token]);
+
+    const fetchNotifications = async () => {
+      setLoading(true);
+      try {
+        const response = await UserService.getNotifications(token);
+        setNotifications(response);
+      } catch (error) {
+        console.error(error);
+        setNotifications([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+
+
+
+
 
 
   return (
@@ -67,7 +92,52 @@ function CreateNotification(){
         </div>
       </form>
     </div>
-    <Footer />
+
+
+    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+    <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+        <thead class="bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Id
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Title
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Description
+                </th>
+            </tr>
+        </thead>
+
+        <tbody class="bg-white divide-y divide-gray-200">
+                {notifications?.map((notification, index) => (
+                    <tr key={index}>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{notification.id}</div>
+                        </td>
+                        <td class="px-6py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{notification.title}</div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="text-sm text-gray-900">{notification.message}</div>
+                        </td>
+
+                        <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
+                            <a href="#" class="ml-2 text-red-600 hover:text-red-900">Delete</a>
+                        </td>
+                    </tr>
+                    ))}
+                  </tbody>
+    </table>
+    </div>
+
+
+
+
+
+        <br/><br/><br/>
+        <Footer />
     </>
   );
 };

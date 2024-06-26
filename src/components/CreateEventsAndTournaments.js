@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
@@ -22,6 +22,27 @@ function CreateEventsAndTournaments(){
       console.error(error);
     }
   };
+
+  const [tournaments, setTournaments] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      fetchTournaments();
+    }, [token]);
+
+    const fetchTournaments = async () => {
+    setLoading(true);
+      try {
+        const response = await UserService.getTournaments(token);
+        setTournaments(response);
+      } catch (error) {
+        console.error(error);
+        setTournaments([]);
+      }finally {
+        setLoading(false);
+      }
+    };
+
 
 
 
@@ -84,6 +105,44 @@ function CreateEventsAndTournaments(){
       </form>
     </div>
 
+
+
+    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+        <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Id
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Title
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody class="bg-white divide-y divide-gray-200">
+                    {tournaments.map((tournament, index) => (
+                        <tr key={index}>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{tournament.id}</div>
+                            </td>
+                            <td class="px-6py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{tournament.title}</div>
+                            </td>
+
+                            <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
+                                <a href="#" class="ml-2 text-red-600 hover:text-red-900">Delete</a>
+                            </td>
+                        </tr>
+                        ))}
+                      </tbody>
+        </table>
+        </div>
+
+
+
+    <br/><br/><br/>
     <Footer />
     </>
 

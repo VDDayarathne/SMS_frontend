@@ -34,8 +34,9 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
   /*{ name: 'Membership', href: '/login', current: false },*/
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
-  { name: 'Sports', href: '/sports', current: false },
   { name: 'Inventory', href: '/admin', current: false },
+  { name: 'MyPlan', href: '/myplan', current: false },
+    { name: 'Profile', href: '/userprofile', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
@@ -43,6 +44,7 @@ const userNavigation = [
   { name: 'Settings', href: '/settings' },
   { name: 'Sign out', href: '/login' },
 ]
+
 
 
 
@@ -73,6 +75,7 @@ function Example({ user }){
                 <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
                   <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
+                        <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={50} className="mr-5" />
                         Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>
@@ -195,7 +198,7 @@ function Example({ user }){
                   <React.Fragment>
                   <FirstPage />
                   <Footer />
-                  <Sidebar />
+
 
                   </React.Fragment>
                 /*
