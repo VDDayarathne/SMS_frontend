@@ -230,6 +230,31 @@ class UserService{
       }
     }
 
+    static async createSchedule(scheduleData, token) {
+        try {
+          const response = await axios.post(`${UserService.BASE_URL}/admin/sport-schedules`, scheduleData, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+
+      static async deleteSchedule(id, token) {
+        try {
+          const response = await axios.delete(`${UserService.BASE_URL}/admin/sport-schedules/${id}`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          return response.data;
+        } catch (err) {
+          throw err;
+        }
+      }
+
+
 
 
 

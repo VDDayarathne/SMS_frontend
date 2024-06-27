@@ -25,6 +25,7 @@ import TermsPage from './components/TermsPage';
 import CreateNotification from './components/CreateNotification';
 import CreateNews from './components/CreateNews';
 import CreateEventsAndTournaments from './components/CreateEventsAndTournaments';
+import CreateShedules from './components/CreateShedules';
 
 
 
@@ -77,6 +78,7 @@ function App() {
               <Route path="/createnotification" element={<CreateNotification />} />
               <Route path="/createnews" element={<CreateNews />} />
               <Route path="/createtournament" element={<CreateEventsAndTournaments />} />
+              <Route path="/createshedules" element={<CreateShedules />} />
 
 
             </Routes>

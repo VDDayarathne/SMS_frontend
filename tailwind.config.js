@@ -23,6 +23,7 @@ module.exports = {
             "./src/components/CreateNotification.{js,jsx,html}" ,
             "./src/components/CreateNews.{js,jsx,html}" ,
             "./src/components/CreateEventsAndTournaments.{js,jsx,html}" ,
+            "./src/components/CreateShedules.{js,jsx,html}" ,
             ],
   theme: {
     extend: {},
