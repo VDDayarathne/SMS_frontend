@@ -137,7 +137,7 @@ function CreateNotification(){
                         </td>
 
                         <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                            <a href="#" class="ml-2 text-red-600 hover:text-red-900"
+                            <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
                             onClick={() => handleDeleteNotification(notification.id)}>
                             Delete</a>
                         </td>

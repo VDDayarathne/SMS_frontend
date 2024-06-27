@@ -124,7 +124,7 @@ function CreateNews(){
                             <td class="px-6py-4 whitespace-nowrap">
                                 <div class="text-sm text-gray-900">{newsItem.title}</div>
                             </td><td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                                <a href="#" class="ml-2 text-red-600 hover:text-red-900"
+                                <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
                                 onClick={(e) => {e.preventDefault();deleteNews(newsItem.id);}}
                                   >
                                   Delete</a>
