@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Fragment } from 'react'
 import Sidebar from './Sidebar';
 import Footer from './Footer';
@@ -9,6 +9,7 @@ import AdminDashboard from './AdminDashboard';
 import Profile from './Profile';
 import SettingsPage from './SettingsPage';
 import LoginForm from './LoginForm';
+import UserService from "./service/UserService";
 
 
 
@@ -34,7 +35,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
   /*{ name: 'Membership', href: '/login', current: false },*/
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
-  { name: 'Inventory', href: '/admin', current: false },
+ /* { name: 'Inventory', href: '/admin', current: false },*/
   { name: 'MyPlan', href: '/myplan', current: false },
     { name: 'Profile', href: '/userprofile', current: false },
   { name: 'About us', href: '/about-us', current: false },
@@ -59,6 +60,23 @@ function Example({ user }){
       const toggleUserMenu = () => {
         setUserMenuOpen(!isUserMenuOpen);
       };
+
+
+      useEffect(() => {
+        fetchProfileInfo();
+      }, []);
+
+      const fetchProfileInfo = async () => {
+        try {
+          const token = localStorage.getItem('token');
+          const response = await UserService.getYourProfile(token);
+          setProfileInfo(response.ourUsers);
+        } catch (error) {
+          console.error('Error fetching profile information:', error);
+        }
+      };
+
+      const [profileInfo, setProfileInfo] = useState({});
 
 
 
@@ -104,6 +122,14 @@ function Example({ user }){
                             {item.name}
                           </a>
                         ))}
+                        {profileInfo.role === 'ADMIN' && (
+                            <a
+                              href="/admin"
+                              className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                            >
+                              Admin Dashboard
+                            </a>
+                          )}
                       </div>
                     </div>
                   </div>
@@ -152,6 +178,14 @@ function Example({ user }){
                       {item.name}
                     </DisclosureButton>
                   ))}
+                  {profileInfo.role === 'ADMIN' && (
+                    <DisclosureButton
+                      href="/admin"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      Admin Dashboard
+                    </DisclosureButton>
+                  )}
                 </div>
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">

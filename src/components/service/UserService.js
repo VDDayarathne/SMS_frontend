@@ -254,6 +254,18 @@ class UserService{
         }
       }
 
+      static async getUserRole(token) {
+        try {
+          const response = await axios.get(`${UserService.BASE_URL}/adminuser/get-profile`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          return response.data.role;
+        } catch (err) {
+          throw err;
+        }
+      }
+
 
 
 
