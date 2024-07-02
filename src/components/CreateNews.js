@@ -16,6 +16,20 @@ function CreateNews(){
       console.log(response.data);
       setTitle('');
       setDescription('');
+
+      axios.get('http://localhost:8080/adminuser/latest-news', {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            })
+            .then(response => {
+              setNews(response.data.data);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+
+
     } catch (error) {
       console.error(error);
     }

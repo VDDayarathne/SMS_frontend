@@ -23,6 +23,8 @@ function CreateShedules() {
       setSport('');
       setVenue('');
       setDescription('');
+      setSchedules([...schedules, newSchedule]);
+
     } catch (error) {
       console.error(error);
     }

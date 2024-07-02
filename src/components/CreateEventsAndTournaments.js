@@ -18,6 +18,7 @@ function CreateEventsAndTournaments(){
       setTitle('');
       setDescription('');
       setImage('');
+      fetchTournaments();
     } catch (error) {
       console.error(error);
     }

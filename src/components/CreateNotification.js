@@ -16,6 +16,7 @@ function CreateNotification(){
       console.log(response.data);
       setTitle('');
       setMessage('');
+      fetchNotifications();
     } catch (error) {
       console.error(error);
     }
