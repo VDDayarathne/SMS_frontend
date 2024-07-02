@@ -26,6 +26,8 @@ import CreateNotification from './components/CreateNotification';
 import CreateNews from './components/CreateNews';
 import CreateEventsAndTournaments from './components/CreateEventsAndTournaments';
 import CreateShedules from './components/CreateShedules';
+import IssuingRegister from './components/IssuingRegister';
+import UpdateRegister from './components/UpdateRegister';
 
 
 
@@ -79,6 +81,9 @@ function App() {
               <Route path="/createnews" element={<CreateNews />} />
               <Route path="/createtournament" element={<CreateEventsAndTournaments />} />
               <Route path="/createshedules" element={<CreateShedules />} />
+              <Route path="/issueregister" element={<IssuingRegister />} />
+              <Route path="/updateregister" element={<UpdateRegister />} />
+
 
 
             </Routes>

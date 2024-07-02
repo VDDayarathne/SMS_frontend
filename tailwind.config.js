@@ -24,6 +24,9 @@ module.exports = {
             "./src/components/CreateNews.{js,jsx,html}" ,
             "./src/components/CreateEventsAndTournaments.{js,jsx,html}" ,
             "./src/components/CreateShedules.{js,jsx,html}" ,
+            "./src/components/IssuingRegister.{js,jsx,html}" ,
+            "./src/components/UpdateRegister.{js,jsx,html}" ,
+
             ],
   theme: {
     extend: {},

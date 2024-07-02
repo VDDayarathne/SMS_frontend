@@ -266,6 +266,33 @@ class UserService{
         }
       }
 
+      static async getIssuingRegisters(token) {
+          try {
+            const response = await axios.get(`${UserService.BASE_URL}/admin/get-all-item-issuing-registers`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            });
+            return response.data;
+          } catch (err) {
+            throw err;
+          }
+      }
+
+      static async createItemIssuingRegister(issuingRegister, token) {
+          try {
+            const response = await axios.post(`${UserService.BASE_URL}/admin/create-item-issuing-register`,issuingRegister,
+              {
+                headers: { Authorization: `Bearer ${token}` },
+              }
+            );
+            return response.data;
+          } catch (error) {
+            throw error;
+          }
+        }
+
 
 
 
