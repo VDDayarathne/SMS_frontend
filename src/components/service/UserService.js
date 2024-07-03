@@ -305,6 +305,31 @@ class UserService{
         }
 
 
+          static async getItemIssuingRegisterById(registerId, token) {
+            try {
+              const response = await axios.get(`${UserService.BASE_URL}/admin/get-item-issuing-register/${registerId}`, {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              });
+              return response.data;
+            } catch (err) {
+              throw err;
+            }
+          }
+
+          static async updateItemIssuingRegister(registerId, registerData, token) {
+            try {
+              const response = await axios.put(`${UserService.BASE_URL}/admin/update-item-issuing-register/${registerId}`, registerData, {
+                headers: { Authorization: `Bearer ${token}` },
+              });
+              return response.data;
+            } catch (err) {
+              throw err;
+            }
+          }
+
+
 
 
 

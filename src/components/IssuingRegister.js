@@ -184,7 +184,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
                   <div class="text-sm text-gray-900">{register.returningTime}</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                  <a href="/updateregister" class="text-green-600 hover:text-green-900">Edit</a>
+                  <a href={`/updateregister?id=${register.id}`} class="text-green-600 hover:text-green-900">Edit</a>
                   <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
                   onClick={() => handleDelete(register.id)}>
                   Delete</a>
