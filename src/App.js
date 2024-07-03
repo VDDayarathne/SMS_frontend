@@ -12,7 +12,6 @@ import RegisterForm from './components/RegisterForm';
 import LoginForm from './components/LoginForm';
 import Swimming from './components/Swimming';
 import WelcomePage from './components/WelcomePage';
-import Inventory from './components/Inventory';
 import AdminDashboard from './components/AdminDashboard';
 import NotificationList from './components/NotificationList';
 import HelpPage from './components/HelpPage';
@@ -83,6 +82,7 @@ function App() {
               <Route path="/createshedules" element={<CreateShedules />} />
               <Route path="/issueregister" element={<IssuingRegister />} />
               <Route path="/updateregister" element={<UpdateRegister />} />
+
 
 
 

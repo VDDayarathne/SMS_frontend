@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 function CreateEventsAndTournaments(){
   const [title, setTitle] = useState('');
@@ -160,7 +161,9 @@ function CreateEventsAndTournaments(){
 
 
     <br/><br/><br/>
+    <Sidebar />
     <Footer />
+
     </>
 
   );

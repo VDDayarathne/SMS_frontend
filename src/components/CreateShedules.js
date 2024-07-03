@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 function CreateShedules() {
   const [time, setTime] = useState('');
@@ -213,7 +214,7 @@ function CreateShedules() {
               </table>
               </div>
 
-
+        <Sidebar />
       <Footer />
     </>
   );

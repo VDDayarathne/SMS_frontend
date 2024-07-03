@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import UserService from "./service/UserService";
 import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 function CreateNews(){
   const [title, setTitle] = useState('');
@@ -151,7 +152,9 @@ function CreateNews(){
 
 
        <br/><br/><br/>
+       <Sidebar />
     <Footer />
+
     </>
 
   );
