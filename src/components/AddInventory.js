@@ -25,6 +25,7 @@ function AddInventory() {
 
 
 
+
   useEffect(() => {
     fetchInventories();
   }, [token]);
@@ -82,6 +83,15 @@ function AddInventory() {
         console.error(error);
       }
     };
+
+    const handleDelete = async (inventoryId) => {
+        try {
+          await UserService.deleteInventory(inventoryId, token);
+          fetchInventories();
+        } catch (error) {
+          console.error(error);
+        }
+      };
 
 
 
@@ -246,7 +256,8 @@ function AddInventory() {
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
                        <a href="javascript:void(0)" class="text-green-600 hover:text-green-900">Edit</a>
-                       <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900">Delete</a>
+                       <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
+                       onClick={() => handleDelete(inventory.id)}> Delete</a>
                      </td>
 
 

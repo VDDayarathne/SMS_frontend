@@ -355,6 +355,17 @@ class UserService{
             }
           }
 
+          static async deleteInventory(inventoryId, token) {
+              try {
+                const response = await axios.delete(`${UserService.BASE_URL}/admin/inventory/${inventoryId}`, {
+                  headers: { Authorization: `Bearer ${token}` },
+                });
+                return response.data;
+              } catch (err) {
+                throw err;
+              }
+            }
+
 
 
 
