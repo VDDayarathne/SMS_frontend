@@ -26,6 +26,8 @@ module.exports = {
             "./src/components/CreateShedules.{js,jsx,html}" ,
             "./src/components/IssuingRegister.{js,jsx,html}" ,
             "./src/components/UpdateRegister.{js,jsx,html}" ,
+            "./src/components/AddInventory.{js,jsx,html}" ,
+            "./src/components/UpdateInventory.{js,jsx,html}" ,
 
             ],
   theme: {

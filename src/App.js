@@ -27,6 +27,8 @@ import CreateEventsAndTournaments from './components/CreateEventsAndTournaments'
 import CreateShedules from './components/CreateShedules';
 import IssuingRegister from './components/IssuingRegister';
 import UpdateRegister from './components/UpdateRegister';
+import Inventory from './components/Inventory';
+import AddInventory from './components/AddInventory';
 
 
 
@@ -82,6 +84,8 @@ function App() {
               <Route path="/createshedules" element={<CreateShedules />} />
               <Route path="/issueregister" element={<IssuingRegister />} />
               <Route path="/updateregister" element={<UpdateRegister />} />
+              <Route path="/inventory" element={<Inventory />} />
+              <Route path="/addinventory" element={<AddInventory />} />
 
 
 

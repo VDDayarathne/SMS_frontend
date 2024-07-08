@@ -35,9 +35,9 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
   /*{ name: 'Membership', href: '/login', current: false },*/
   { name: 'Sport Shedules', href: '/sport-shedule', current: false },
- /* { name: 'Inventory', href: '/admin', current: false },*/
+  { name: 'Inventory', href: '/inventory', current: false },
   { name: 'MyPlan', href: '/myplan', current: false },
-    { name: 'Profile', href: '/userprofile', current: false },
+  { name: 'Profile', href: '/userprofile', current: false },
   { name: 'About us', href: '/about-us', current: false },
 ]
 const userNavigation = [
