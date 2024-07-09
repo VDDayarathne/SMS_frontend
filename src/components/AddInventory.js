@@ -220,7 +220,12 @@ function AddInventory() {
         <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
             <thead class="bg-gray-50">
                 <tr>
-
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        ID
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Sport Category
+                    </th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Equipment Name
                     </th>
@@ -233,6 +238,7 @@ function AddInventory() {
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Date
                     </th>
+
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                          Actions
                      </th>
@@ -242,6 +248,13 @@ function AddInventory() {
             <tbody class="bg-white divide-y divide-gray-200">
                {filteredInventories.map((inventory, index) => (
                 <tr key={index}>
+
+                    <td class="px-6 py-4 whitespace-nowrap">
+                         <div class="text-sm text-gray-900">{inventory.id}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                         <div class="text-sm text-gray-900">{inventory.sportCategory.name}</div>
+                    </td>
                     <td class="px-6 py-4 whitespace-nowrap">
                          <div class="text-sm text-gray-900">{inventory.equipment.name}</div>
                     </td>
@@ -254,8 +267,9 @@ function AddInventory() {
                     <td class="px-6 py-4 whitespace-nowrap">
                          <div class="text-sm text-gray-900">{inventory.updatedAt}</div>
                     </td>
+
                     <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                       <a href="javascript:void(0)" class="text-green-600 hover:text-green-900">Edit</a>
+                       <a href={`/updateinventory/${inventory.id}`} class="text-green-600 hover:text-green-900">Edit</a>
                        <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
                        onClick={() => handleDelete(inventory.id)}> Delete</a>
                      </td>

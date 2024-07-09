@@ -29,6 +29,7 @@ import IssuingRegister from './components/IssuingRegister';
 import UpdateRegister from './components/UpdateRegister';
 import Inventory from './components/Inventory';
 import AddInventory from './components/AddInventory';
+import UpdateInventory from './components/UpdateInventory';
 
 
 
@@ -86,6 +87,7 @@ function App() {
               <Route path="/updateregister" element={<UpdateRegister />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/addinventory" element={<AddInventory />} />
+              <Route path="/updateinventory/:inventoryId" element={<UpdateInventory />} />
 
 
 

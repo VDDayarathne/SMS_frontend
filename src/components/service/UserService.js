@@ -366,6 +366,29 @@ class UserService{
               }
             }
 
+          static async updateInventory(id, inventoryData, token) {
+              try {
+                const response = await axios.put(`${UserService.BASE_URL}/admin/inventory/${id}`, inventoryData, {
+                  headers: { Authorization: `Bearer ${token}` },
+                });
+                return response.data;
+              } catch (err) {
+                throw err;
+              }
+            }
+
+            static async getInventory(id, token) {
+                try {
+                  const response = await axios.get(`${UserService.BASE_URL}/admin/inventory/${id}`, {
+                    headers: { Authorization: `Bearer ${token}` },
+                  });
+                  return response.data;
+                } catch (err) {
+                  throw err;
+                }
+              }
+
+
 
 
 

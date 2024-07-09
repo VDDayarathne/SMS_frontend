@@ -57,7 +57,7 @@ function Inventory() {
                     <option value="tennis">Tennis</option>
                     <option value="swimming">Swimming</option>
                     <option value="badminton">Badminton</option>
-                    <option value="net ball">Net Ball</option>
+                    <option value="netball">Net Ball</option>
                     <option value="basket ball">Basket Ball</option>
                     <option value="rugger">Rugger</option>
                     <option value="baseball">BaseBall</option>
@@ -69,6 +69,9 @@ function Inventory() {
   <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
       <thead class="bg-gray-50">
           <tr>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Sport
+              </th>
 
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Equipment Name
@@ -86,6 +89,9 @@ function Inventory() {
          {filteredInventories.map((inventory, index) => (
           <tr key={index}>
               <td class="px-6 py-4 whitespace-nowrap">
+                   <div class="text-sm text-gray-900">{inventory.sportCategory.name}</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
                    <div class="text-sm text-gray-900">{inventory.equipment.name}</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
@@ -94,6 +100,7 @@ function Inventory() {
               <td class="px-6 py-4 whitespace-nowrap">
                    <div class="text-sm text-gray-900">{inventory.quantity}</div>
               </td>
+
 
 
           </tr>))}
