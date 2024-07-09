@@ -81,6 +81,7 @@ function UpdateRegister() {
                           className="w-full bg-transparent p-0 text-sm text-gray-500 focus:outline-none"
                           id="description"
                           name="description"
+                          readOnly={true}
                           value={registerData.description}
                             onChange={handleInputChange}
                         />
@@ -92,6 +93,7 @@ function UpdateRegister() {
                           id="studentId"
                           type="text"
                           name="studentId"
+                          readOnly={true}
                           value={registerData.studentId}
                             onChange={handleInputChange}
                         />
@@ -99,10 +101,11 @@ function UpdateRegister() {
                       <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="items">
                         <span className="text-md font-semibold text-zinc-900">Items</span>
                         <input
-                          className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
+                          className="w-full p-0 text-sm border-none bg-transparent text-gray-500 focus:outline-none"
                           id="items"
                           type="items"
                           name="items"
+                          readOnly={true}
                           value={registerData.items.join(', ')}
                             onChange={handleInputChange}
 

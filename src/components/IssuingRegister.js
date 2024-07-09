@@ -111,18 +111,8 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
                 />
               </div>
             </div>
-        <div className="sm:col-span-2">
-              <label htmlFor="returningtime" className="block text-sm font-semibold leading-6 text-gray-900">Return Date & Time</label>
-              <div className="mt-2.5">
-                <input
-                  type="text"
-                  id="returningtime"
-                  name="returningtime"
-                  value={returningTime} onChange={(e) => setReturningTime(e.target.value)}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
+
+
 
 
         <div className="mt-10">
@@ -185,9 +175,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
               </td>
               <td class="px-6 py-4 whitespace-nowrap  text-sm font-medium">
                   <a href={`/updateregister?id=${register.id}`} class="text-green-600 hover:text-green-900">Edit</a>
-                  <a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
-                  onClick={() => handleDelete(register.id)}>
-                  Delete</a>
+
               </td>
           </tr>
           ))}
@@ -205,3 +193,21 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
   };
 
   export default IssuingRegister;
+
+  /*<a href="javascript:void(0)" class="ml-2 text-red-600 hover:text-red-900"
+    onClick={() => handleDelete(register.id)}>
+    Delete</a>*/
+
+  /*
+  <div className="sm:col-span-2">
+  <label htmlFor="returningtime" className="block text-sm font-semibold leading-6 text-gray-900">Return Date & Time</label>
+    <div className="mt-2.5">
+      <input
+        type="text"
+        id="returningtime"
+        name="returningtime"
+        value={returningTime} onChange={(e) => setReturningTime(e.target.value)}
+        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+      />
+    </div>
+  */
