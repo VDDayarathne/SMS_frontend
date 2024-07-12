@@ -65,15 +65,15 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
 
 
  return (
-  <>
+  <div className="bg-[#787578]">
 <section>
-
-<div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
-      <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Issuing Register</h1>
+<div className="bg-[#787578] px-6 py-12 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-4 text-center">Issuing Register</h1><br/>
         <p className="mt-3 text-lg text-gray-600"></p>
       </div>
-      <form className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <div className="bg-white/50 max-w-2xl rounded-3xl mx-auto"><br/>
+      <form className="mx-auto mt-16 max-w-xl sm:mt-8">
         <div className="sm:col-span-2">
           <label htmlFor="description" className="block text-sm font-semibold leading-6 text-gray-900">Description</label>
           <div className="mt-2.5">
@@ -117,23 +117,24 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
 
         <div className="mt-10">
           <button
-            className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:text-[#F6AC01] dark:bg-[#787578] dark:text-white focus:outline-none focus:shadow-outline"
             type="submit"
             onClick={handleSubmit}
           >
             Issue
           </button>
         </div>
-      </form>
+        <br/>
+      </form></div>
     </div>
 
 
 
 
 
-<div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
-  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
-      <thead class="bg-gray-50">
+<div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72 w-250">
+  <table class="min-w-full divide-y divide-[#787578] overflow-x-auto w-250">
+      <thead class="rounded-3xl w-250">
           <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Issuing Time
@@ -155,7 +156,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
               </th>
           </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200">
+      <tbody class="rounded-3xl divide-y divide-[#787578] w-250">
         {issuingRegisters?.map((register, index) => (
           <tr key={index}>
               <td class="px-6 py-4 whitespace-nowrap">
@@ -187,7 +188,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
   <br/><br/><br/>
       <Footer />
       <Sidebar />
-      </>
+      </div>
 
     );
   };

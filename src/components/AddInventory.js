@@ -109,12 +109,14 @@ function AddInventory() {
 
 
 
-    return(<>
-<div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
+    return(<div className="bg-[#787578]">
+<div className="bg-[#787578] px-6 py-12 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-2 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Inventory</h1>
           <p className="mt-3 text-lg text-gray-600">Add To the Inventory</p>
         </div>
+        <div className="bg-white/25 max-w-5xl rounded-3xl mx-auto p-3 mb-8">
+        <div className="rounded-3xl dark:bg-white/75 space-y-2 shadow-md p-3 ">
         <form className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
 
                     <div className="sm:col-span-2">
@@ -186,7 +188,7 @@ function AddInventory() {
 
           <div className="mt-10">
             <button
-              className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+              className="w-full px-4 py-2 font-bold text-white bg-[#787578] rounded-full hover:text-[#F6AC01] dark:bg-[#787578] dark:text-white focus:outline-none focus:shadow-outline"
               type="submit"
               onClick={handleSubmit}
             >
@@ -194,19 +196,20 @@ function AddInventory() {
             </button>
           </div>
         </form>
-      </div>
+      </div></div></div>
 
+<section className="bg-[#787578]">
 
-      <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+      <div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72 w-250">
 
                   <div className="sm:col-span-2">
-                      <label htmlFor="sport" className="block text-sm font-semibold leading-6 text-gray-900">Sport Category</label>
+                      <label htmlFor="sport" className="block text-sm font-semibold item-center justify-center leading-8 text-gray-900 w-300">Sport Category</label>
                       <select
                           id="sport"
                           name="sport"
                           value={sportCategoryId}
                           onChange={handleSportCategoryChange}
-                          class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-black-400"
+                          class="border border-gray-400 p-4 w-full rounded-lg focus:outline-none focus:border-black-400"
                           required
                         >
                           <option value="">Select a sport category</option>
@@ -225,9 +228,9 @@ function AddInventory() {
                       </select>
                   </div>
 
-
-        <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
-            <thead class="bg-gray-50">
+        <div className="bg-white rounded-3xl w-250">
+        <table class="min-w-full divide-y divide-[#787578] overflow-x-auto">
+            <thead>
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         ID
@@ -248,13 +251,13 @@ function AddInventory() {
                         Date
                     </th>
 
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                          Actions
                      </th>
 
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
+            <tbody class="divide-y divide-[#787578]">
                {filteredInventories.map((inventory, index) => (
                 <tr key={index}>
 
@@ -285,8 +288,10 @@ function AddInventory() {
                      </tr>
                    ))}
                  </tbody>
-               </table>
+               </table></div>
              </div>
+
+             <section/>
 
              {deleteId && (
                <div className="fixed z-50 inset-0 overflow-y-auto">
@@ -316,21 +321,22 @@ function AddInventory() {
                               <div className="mt-2"></div></div></div>
                      <p className="text-sm text-gray-500">Are you sure you want to delete this inventory?</p>
                      <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-                       <button type="button" data-behavior="commit" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                       <button type="button" data-behavior="commit" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-[#787578] hover:text-[#F6AC01] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
                        onClick={handleConfirmDelete}
                        >
                          Yes, Delete
                        </button>
-                       <button type="button" data-behavior="cancel" className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:w-auto sm:text-sm"
+                       <button type="button" data-behavior="cancel" className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-[#F6AC01] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:w-auto sm:text-sm"
                          onClick={handleCancelDelete}
                        >
                          No, Cancel
                        </button>
-                     </div></div></div></div> )}
+                     </div></div></div></div> )}</section>
+
 
     <Footer />
     <Sidebar />
-      </>
+      </div>
 
    );
  }

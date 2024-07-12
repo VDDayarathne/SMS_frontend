@@ -69,13 +69,14 @@ function CreateEventsAndTournaments(){
 
 
   return (
-  <>
-    <div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
-      <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
+  <div className="bg-[#787578]">
+    <div className="px-6 py-12 sm:py-24 lg:px-8">
+      <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Events & Tournaments</h1>
-        <p className="mt-3 text-lg text-gray-600">Add Events & Tournaments</p>
+        <p className="mt-3 text-lg text-gray-600">Add Events & Tournaments</p><br/>
       </div>
-      <form className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <div className="bg-white/50 max-w-2xl rounded-3xl mx-auto"><br/>
+      <form className="mx-auto mt-16 max-w-xl sm:mt-5">
         <div className="sm:col-span-2">
           <label htmlFor="title" className="block text-sm font-semibold leading-6 text-gray-900">Title</label>
           <div className="mt-2.5">
@@ -117,21 +118,21 @@ function CreateEventsAndTournaments(){
 
         <div className="mt-10">
           <button
-            className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 font-bold text-white bg-[#787578] rounded-full dark:text-white dark:hover:text-[#F6AC01] focus:outline-none focus:shadow-outline"
             type="submit"
             onClick={handleSubmit}
           >
             Create News
           </button>
-        </div>
+        </div><br/>
       </form>
-    </div>
+    </div></div>
 
 
 
-    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+    <div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72">
         <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
-            <thead class="bg-gray-50">
+            <thead class="rounded-3xl">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Id
@@ -146,7 +147,7 @@ function CreateEventsAndTournaments(){
                 </tr>
             </thead>
 
-            <tbody class="bg-white divide-y divide-gray-200">
+            <tbody class="divide-y divide-gray-200">
                     {tournaments.map((tournament, index) => (
                         <tr key={index}>
                             <td class="px-6 py-4 whitespace-nowrap">
@@ -202,12 +203,12 @@ function CreateEventsAndTournaments(){
               </div>
             </div>
             <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-              <button type="button" data-behavior="commit" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+              <button type="button" data-behavior="commit" className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-[#787578] hover:text-[#F6AC01] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
                 onClick={handleConfirmDelete}
               >
                 Yes, Delete
               </button>
-              <button type="button" data-behavior="cancel" className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:w-auto sm:text-sm"
+              <button type="button" data-behavior="cancel" className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:text-[#F6AC01] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:w-auto sm:text-sm"
                 onClick={handleCancelDelete}
               >
                 No, Cancel
@@ -223,7 +224,7 @@ function CreateEventsAndTournaments(){
     <Sidebar />
     <Footer />
 
-    </>
+    </div>
 
   );
 };

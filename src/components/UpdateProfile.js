@@ -63,14 +63,15 @@ function UpdateUser() {
 
 
   return (
-    <>
+    <div className="bg-[#787578]">
       <Sidebar />
-      <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+      <div className="bg-white/50 rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72">
               <div className="flex justify-between container mx-auto">
-                <div className="w-full">
+                <div className="w-full ">
                   <div className="mt-4 px-4">
+                  <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white space-y-2 shadow-md rounded-3xl p-0 mb-8">
                     <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Sports Center</h1>
-                    <h1 className="font-thinner justify-center flex text-4xl text-[#23262B]">Sabaragamuwa University of Sri Lanka</h1>
+                    <h1 className="font-thinner justify-center flex text-5xl font-bold text-[#23262B]">Sabaragamuwa University of Sri Lanka</h1><br/></div>
                     <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Setup Your profile</h1>
 
 
@@ -135,7 +136,7 @@ function UpdateUser() {
               </div>
             </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
