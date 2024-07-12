@@ -89,16 +89,16 @@ function Example({ user }){
 
       <div className="min-h-full">
 
-      <header className="bg-white shadow">
-                <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <header className="bg-[#F6AC01] shadow">
+                <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
 
                   <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
-                        <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={50} className="mr-5" />
+                        <img src="https://tourismconference.co/wp-content/uploads/2019/11/Sabaragamuwa-University-LOGO.png" width={50} className="mr-5" />
                         Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>
               </header>
-        <Disclosure as="nav" className="bg-gray-700">
+        <Disclosure as="nav" className="bg-white">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -113,8 +113,8 @@ function Example({ user }){
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-gray-900 text-white'
-                                : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                ? 'bg-white text-[#23262B]'
+                                : 'text-[#2362B] hover:text-gray-500',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -125,7 +125,7 @@ function Example({ user }){
                         {profileInfo.role === 'ADMIN' && (
                             <a
                               href="/admin"
-                              className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                              className="rounded-md px-3 py-2 text-sm font-medium text-[#23262B]  hover:text-gray-500"
                             >
                               Admin Dashboard
                             </a>
@@ -137,7 +137,7 @@ function Example({ user }){
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        className="relative rounded-full  p-1 text-[#2362B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                       <a href="/notification">
                         <span className="absolute -inset-1.5" />
@@ -149,7 +149,7 @@ function Example({ user }){
                   </div>
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <DisclosureButton className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <DisclosureButton className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-[#2362B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -170,7 +170,7 @@ function Example({ user }){
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-white text-[#23262B]' : 'text-gray-300 hover:text-[#23262B]',
                         'block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -181,7 +181,7 @@ function Example({ user }){
                   {profileInfo.role === 'ADMIN' && (
                     <DisclosureButton
                       href="/admin"
-                      className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-[#23262B] hover:text-gray-500"
                     >
                       Admin Dashboard
                     </DisclosureButton>
@@ -193,7 +193,7 @@ function Example({ user }){
 
                     <button
                       type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-[#23262B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">View notifications</span>
@@ -206,7 +206,7 @@ function Example({ user }){
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-[#23262B] hover:text-gray-500"
                       >
                         {item.name}
                       </DisclosureButton>
@@ -218,13 +218,9 @@ function Example({ user }){
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">League Sabra</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
+
+        <main className="bg-[#787578] shadow">
+          <div className="mx-auto max-w-7xl py-1 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
       </div>
 

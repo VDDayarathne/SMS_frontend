@@ -28,18 +28,20 @@ function NotificationList() {
 
 
   return (
-    <div className="bg-white min-h-screen">
-      <Sidebar />
-      <div className="mb-16">
+    <div className="bg-[#787578]">
+      <Sidebar /><br/><br/>
+      <div className="bg-[#787578] dark:bg-white/25 space-y-2">
       </div>
-      <div className="container mx-auto">
-        <div className="bg-white shadow-md rounded-md p-8 mb-8">
-          <h2 className="text-2xl font-bold text-center text-black-500 mb-4">Notifications</h2>
+      <div className="rounded-3xl bg-[#787578] space-y-2 container mx-auto ">
+      <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-3xl p-2 mb-8">
+      <h1 className="text-2xl font-bold text-center text-[#23262B] mb-4">Notifications</h1></div>
+        <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-3xl p-8 mb-8">
+
           <ul>
             {notifications?.map((notification, index) => (
               <li key={index}>
                 <div className="container mx-auto">
-                  <div className="bg-white shadow-md rounded-md p-8 mb-8">
+                  <div className="bg-white shadow-md rounded-3xl p-8 mb-8">
                     <h2>{notification.title}</h2>
                     <p>{notification.message}</p>
                   </div>

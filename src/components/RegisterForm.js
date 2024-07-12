@@ -11,7 +11,6 @@ function RegistrationPage(){
         email: '',
         password: '',
         role: 'USER',
-        password: '',
         faculty: '',
         bio: '',
         indexnumber: ''
@@ -36,7 +35,6 @@ function RegistrationPage(){
                 email: '',
                 password: '',
                 role: '',
-                password: '',
                 faculty: '',
                 bio: '',
                 indexnumber: ''

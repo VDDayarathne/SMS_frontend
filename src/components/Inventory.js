@@ -36,11 +36,14 @@ function Inventory() {
 
 
     return(
-<section><br/><br/><br/>
-<div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
+<section className="bg-[#787578]"><br/>
 
+    <div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
+    <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-md p-2 mb-8">
+            <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Inventory</h1>
             <div className="sm:col-span-2">
-                <label htmlFor="sport" className="block text-sm font-semibold leading-6 text-gray-900">Sport Category</label>
+
+                <label htmlFor="sport" className="block text-sm font-semibold text-3xl leading-6 text-gray-900">Sport Category</label>
                 <select
                     id="sport"
                     name="sport"
@@ -65,9 +68,9 @@ function Inventory() {
                 </select>
             </div>
 
-
-  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
-      <thead class="bg-gray-50">
+<div className="bg-white rounded-3xl">
+  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto ">
+      <thead>
           <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Sport
@@ -85,7 +88,7 @@ function Inventory() {
 
           </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200">
+      <tbody class=" divide-y divide-gray-200">
          {filteredInventories.map((inventory, index) => (
           <tr key={index}>
               <td class="px-6 py-4 whitespace-nowrap">
@@ -106,7 +109,8 @@ function Inventory() {
           </tr>))}
 
        </tbody>
-  </table>
+  </table></div>
+</div>
 </div>
 <Sidebar />
 <Footer />

@@ -33,12 +33,17 @@ function SportShedule() {
   };
 
   return (
-    <div style={{ backgroundColor: '#f4f4f0' }} className="sm:mx-32 lg:mx-32 xl:mx-72">
-      <section className="bg-white py-20">
-        <div className="container mx-auto p-4">
-          <h2 className="text-2xl font-bold mb-8">Sport Schedules</h2>
+  <>
+  <div className=" bg-[#787578]">
+    <div className=" bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
+      <section className="bg-[#787578] py-20 rounded-3xl">
 
-          <h2 className="text-gray-500 font-bold mb-8">Monday</h2>
+        <div className="container mx-auto p-4">
+        <div className=" bg-white/25 rounded-3xl p-1 mb-4">
+          <h1 className="text-3xl font-bold justify-center flex mb-0">Sport Schedules</h1><br/></div>
+        <section className=" bg-white/25 rounded-3xl p-4 mb-4">
+        <div className="bg-white rounded-3xl">
+          <h2 className="text-[#23262B] justify-center flex font-bold mb-8">MONDAY</h2>
           <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
             <thead className="bg-gray-50">
               <tr>
@@ -56,7 +61,7 @@ function SportShedule() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
               {getSchedulesByDay('Monday').map((schedule, index) => (
                 <tr key={index}>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -77,11 +82,12 @@ function SportShedule() {
               ))}
             </tbody>
           </table>
+          </div>
 
 
           <br /><br />
-
-          <h2 className="text-gray-500 font-bold mb-8">Tuesday</h2>
+        <div className="bg-white rounded-3xl">
+          <h2 className="text-[#23262B] justify-center flex font-bold mb-8">TUESDAY</h2>
           <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
             <thead className="bg-gray-50">
               <tr>
@@ -99,7 +105,7 @@ function SportShedule() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
                   {getSchedulesByDay('Tuesday').map((schedule, index) => (
                     <tr key={index}>
                       <td className="px-6 py-4 whitespace-nowrap">
@@ -120,10 +126,11 @@ function SportShedule() {
                   ))}
                 </tbody>
           </table>
+          </div>
 
           <br /><br />
-
-          <h2 className="text-gray-500 font-bold mb-8">Wednesday</h2>
+        <div className="bg-white rounded-3xl">
+          <h2 className="text-[#23262B] justify-center flex font-bold mb-8">WEDNESDAY</h2>
           <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
             <thead className="bg-gray-50">
               <tr>
@@ -141,7 +148,7 @@ function SportShedule() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
                   {getSchedulesByDay('Wednesday').map((schedule, index) => (
                     <tr key={index}>
                       <td className="px-6 py-4 whitespace-nowrap">
@@ -162,10 +169,11 @@ function SportShedule() {
                   ))}
                 </tbody>
           </table>
+          </div>
 
           <br /><br />
-
-          <h2 className="text-gray-500 font-bold mb-8">Thursday</h2>
+        <div className="bg-white rounded-3xl">
+          <h2 className="text-[#23262B] justify-center flex font-bold mb-8">THURSDAY</h2>
           <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
             <thead className="bg-gray-50">
               <tr>
@@ -183,7 +191,7 @@ function SportShedule() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
               {getSchedulesByDay('Thursday').map((schedule, index) => (
                 <tr key={index}>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -204,11 +212,12 @@ function SportShedule() {
               ))}
             </tbody>
           </table>
+          </div>
 
           <br /><br />
-
-          <h2 className="text-gray-500 font-bold mb-8">Friday</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
+        <div className="bg-white rounded-3xl">
+          <h2 className="text-[#23262B] justify-center flex font-bold mb-8">FRIDAY</h2>
+          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto rounded-3xl">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -225,7 +234,7 @@ function SportShedule() {
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="divide-y divide-gray-200">
               {getSchedulesByDay('Friday').map((schedule, index) => (
                 <tr key={index}>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -247,14 +256,20 @@ function SportShedule() {
             </tbody>
           </table>
 
-          <br /><br /><br />
+          </div></section>
 
-          <Footer />
-          <Sidebar />
+
+
         </div>
       </section>
     </div>
+    </div>
+    <Sidebar />
+    <Footer />
+
+    </>
   );
+
 }
 
 export default SportShedule;

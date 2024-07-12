@@ -69,12 +69,13 @@ function UpdateUser() {
               <div className="flex justify-between container mx-auto">
                 <div className="w-full">
                   <div className="mt-4 px-4">
-                    <h1 className="text-3xl font-semibold py-7 px-5">Sports Center - Sabaragamuwa University of Sri Lanka</h1>
+                    <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Sports Center</h1>
+                    <h1 className="font-thinner justify-center flex text-4xl text-[#23262B]">Sabaragamuwa University of Sri Lanka</h1>
                     <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Setup Your profile</h1>
 
 
                     <form className="mx-5 my-5">
-                      <label className="relative block p-3 border-2 border-black rounded" htmlFor="name">
+                      <label className="relative block p-3 border-2 border-black-700 rounded" htmlFor="name">
                         <span className="text-md font-semibold text-zinc-900">Name</span>
                         <input
                           className="w-full bg-transparent p-0 text-sm text-gray-500 focus:outline-none"
@@ -84,7 +85,7 @@ function UpdateUser() {
                           placeholder="name"
                         />
                       </label>
-                      <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="bio">
+                      <label className="relative block p-3 border-2 mt-5 border-black-700 rounded" htmlFor="bio">
                         <span className="text-md font-semibold text-zinc-900">Bio</span>
                         <input
                           className="w-full p-0 text-sm border-none bg-transparent text-gray-500 focus:outline-none"
@@ -93,16 +94,17 @@ function UpdateUser() {
                           placeholder="Write Your Bio"
                         />
                       </label>
-                      <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="upi">
-                        <span className="text-md font-semibold text-zinc-900">Email Id</span>
+                      <label className="relative block p-3 border-2 mt-5 border-black-700 rounded" htmlFor="upi">
+                        <span className="text-md font-semibold text-zinc-900" >Email Id</span>
                         <input
-                          className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
+                          className="w-full p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
                           id="upi"
+                          readOnly={true}
                           type="email" name="email" value={userData.email} onChange={handleInputChange}
                           placeholder="ie: example@gmail.com"
                         />
                       </label>
-                      <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="paypal">
+                      <label className="relative block p-3 border-2 mt-5 border-black-700 rounded" htmlFor="paypal">
                         <span className="text-md font-semibold text-zinc-900">Faculty / Department</span>
                         <input
                           className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
@@ -110,7 +112,7 @@ function UpdateUser() {
                           type="text" name="faculty" value={userData.faculty} onChange={handleInputChange}
                         />
                       </label>
-                      <label className="relative block p-3 border-2 mt-5 border-black rounded" htmlFor="paypal">
+                      <label className="relative block p-3 border-2 mt-5 border-black-700 rounded" htmlFor="paypal">
                         <span className="text-md font-semibold text-zinc-900">Index Number</span>
                         <input
                           className="w-full read-only:bg-zinc-800 p-0 text-sm bg-transparent text-gray-500 focus:outline-none"
@@ -120,7 +122,7 @@ function UpdateUser() {
                       </label><br /><br />
                       <div class="mb-6 text-center">
                           <button
-                              class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+                              class="w-full px-4 py-2 font-bold text-white bg-[#787578] rounded-full hover:text-[#F6AC01] dark:bg-[#787578] dark:text-white focus:outline-none focus:shadow-outline"
                               type="button"
                               onClick={handleSubmit}
                           >

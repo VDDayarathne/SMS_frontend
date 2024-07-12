@@ -53,10 +53,14 @@ function MyPlan() {
     };
 
   return (
-    <>
-      <Sidebar />
+    <div className="bg-[#787578]"><br/><br/><br/>
+    <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/75 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Create Your Own Plan</h1>
+                <br/><br/>
+              </div>
+        <div className="bg-white/25 max-w-5xl rounded-3xl mx-auto p-2 mb-8">
 
-      <div className="max-w-5xl mx-auto mt-8">
+            <div className="rounded-3xl dark:bg-white/75 space-y-2 shadow-md rounded-md p-2 mb-8">
               <div className="border-l-2 border-gray-500 pl-8">
                 {events && events.length > 0 && events.map((event, index) => (
                   <div key={index} className="flex flex-col md:flex-row md:justify-between">
@@ -67,9 +71,9 @@ function MyPlan() {
                     <p className="text-gray-700">{event.description}</p>
                   </div>
                 ))}
-              </div>
+              </div></div>
 
-        <div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
+        <div className="rounded-3xl px-6 py-12 sm:py-24 lg:px-8">
           <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Add A New Event</h1>
             <p className="mt-3 text-lg text-gray-600">Create your own</p>
@@ -119,7 +123,7 @@ function MyPlan() {
 
             <div className="mt-10">
               <button
-                className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+                className="w-full px-4 py-2 font-bold text-white bg-[#23262B]/75 rounded-full hover:text-[#F6AC01] dark:bg-[#23262B]/75 dark:text-white focus:outline-none focus:shadow-outline"
                 type="button"
                 onClick={handleSubmit}
               >
@@ -130,9 +134,9 @@ function MyPlan() {
         </div>
 
       </div>
-
+      <Sidebar />
       <Footer />
-    </>
+    </div>
   );
 }
 

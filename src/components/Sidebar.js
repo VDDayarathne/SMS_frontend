@@ -164,12 +164,12 @@ function Sidebar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-20 h-full border-r bg-white space-y-8">
+      <nav className="fixed top-0 left-0 w-20 h-full border-r bg-[#787578] space-y-8">
         <div className="flex flex-col h-full">
           <div className="h-20 flex items-center justify-center px-8">
             <a href="#" className="flex-none">
               <img
-                src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png"
+                src="https://tourismconference.co/wp-content/uploads/2019/11/Sabaragamuwa-University-LOGO.png"
                 width={35}
                 className="mx-auto"
               />
@@ -181,9 +181,9 @@ function Sidebar() {
                 <li key={idx}>
                   <a
                     href={item.href}
-                    className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-gray-50 active:bg-gray-100 duration-150 group"
+                    className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg active:bg-gray-100 duration-150 group"
                   >
-                    <div className="text-gray-500">{item.icon}</div>
+                    <div className="text-[#23262B]">{item.icon}</div>
                     <span className="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150">
                       {item.name}
                     </span>
@@ -197,9 +197,9 @@ function Sidebar() {
                   <li key={idx}>
                     <a
                       href={item.href}
-                      className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-gray-50 active:bg-gray-100 duration-150 group"
+                      className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg   active:bg-gray-100 duration-150 group"
                     >
-                      <div className="text-gray-500">{item.icon}</div>
+                      <div className="text-[#23262B]">{item.icon}</div>
                       <span className="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150">
                         {item.name}
                       </span>
@@ -214,7 +214,7 @@ function Sidebar() {
                       <Avatar.Image
                         className="w-12 h-12 flex items-center gap-x-4 cursor-pointer rounded-full ring-offset-2 ring-gray-800 focus:ring-2 duration-150"
                         src="https://th.bing.com/th/id/R.d2c893f55930c7cb5bfe41538be295d7?rik=RCCbETsRGcm2iQ&pid=ImgRaw&r=0"
-                        alt="vienna"
+                        alt="user"
                       />
                       <Avatar.Fallback
                         className="flex w-12 h-12 rounded-full items-center justify-center text-white text-sm font-medium bg-gradient-to-r from-teal-400 to-blue-500"
