@@ -126,7 +126,7 @@ function CreateNews(){
 
 
     <div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72 w-250">
-      <table class="min-w-full divide-y divide-[#787578] overflow-x-auto w-250">
+      <table class="min-w-full divide-y divide-[#787578] overflow-x-auto w-250 mx-auto">
             <thead class="rounded-3xl w-250">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">

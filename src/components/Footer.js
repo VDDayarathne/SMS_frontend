@@ -26,7 +26,7 @@ export default () => {
 				<h3 className="tracking-wide uppercase dark:text-white/75">Quick Access</h3>
 				<ul className="space-y-1">
 					<li className="hover:text-[#F6AC01]">
-						<a rel="noopener noreferrer" href="#">Staff</a>
+						<a rel="noopener noreferrer" href="/staff">Staff</a>
 					</li>
 					<li className="hover:text-[#F6AC01]">
 						<a rel="noopener noreferrer" href="#">Students</a>

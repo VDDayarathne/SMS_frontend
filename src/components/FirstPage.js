@@ -34,7 +34,8 @@ export default () => {
 			<div className="flex flex-col justify-center flex-1 p-6 dark:bg-gray-50">
 				<span className="text-xs uppercase dark:text-[#23262B]"></span>
 				<h3 className="text-3xl font-bold text-[#23262B]">Quick access and create a path of success</h3>
-				<button type="button" className="self-start text-[#23262B] hover:text-[#F6AC01]">Staff</button>
+				<button type="button" className="self-start text-[#23262B] hover:text-[#F6AC01]">
+				<a href="/staff">Staff</a></button>
 				<button type="button" className="self-start text-[#23262B] hover:text-[#F6AC01]">Students</button>
 				<button type="button" className="self-start text-[#23262B] hover:text-[#F6AC01]">Members</button>
 			</div>

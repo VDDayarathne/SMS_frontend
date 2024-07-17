@@ -28,6 +28,7 @@ module.exports = {
             "./src/components/UpdateRegister.{js,jsx,html}" ,
             "./src/components/AddInventory.{js,jsx,html}" ,
             "./src/components/UpdateInventory.{js,jsx,html}" ,
+            "./src/components/Staff.{js,jsx,html}" ,
 
             ],
   theme: {

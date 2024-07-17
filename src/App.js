@@ -30,6 +30,7 @@ import UpdateRegister from './components/UpdateRegister';
 import Inventory from './components/Inventory';
 import AddInventory from './components/AddInventory';
 import UpdateInventory from './components/UpdateInventory';
+import Staff from './components/Staff';
 
 
 
@@ -88,6 +89,8 @@ function App() {
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/addinventory" element={<AddInventory />} />
               <Route path="/updateinventory/:inventoryId" element={<UpdateInventory />} />
+              <Route path="/staff" element={<Staff />} />
+
 
 
 

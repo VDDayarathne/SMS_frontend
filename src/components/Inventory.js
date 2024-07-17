@@ -37,10 +37,15 @@ function Inventory() {
 
     return(
 <section className="bg-[#787578]"><br/>
+    <br/><br/>
+      <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white/75 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
+           <h1 className="text-4xl text-center text-[#23262B] font-bold mb-8">Inventory</h1>
+           <br/><br/>
+         </div>
 
     <div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
-    <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-md p-2 mb-8">
-            <h1 className="font-thinner justify-center flex text-4xl pt-10 px-5">Inventory</h1>
+    <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md p-2 mb-8">
+
             <div className="sm:col-span-2">
 
                 <label htmlFor="sport" className="block text-sm font-semibold text-3xl leading-6 text-gray-900">Sport Category</label>
@@ -69,7 +74,7 @@ function Inventory() {
             </div>
 
 <div className="bg-white rounded-3xl">
-  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto ">
+  <table class="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
       <thead>
           <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
