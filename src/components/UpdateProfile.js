@@ -63,7 +63,7 @@ function UpdateUser() {
 
 
   return (
-    <div className="bg-[#787578]">
+    <div className="bg-[#787578]"><br/><br/><br/>
       <Sidebar />
       <div className="bg-white/50 rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72">
               <div className="flex justify-between container mx-auto">

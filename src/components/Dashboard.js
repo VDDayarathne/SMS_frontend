@@ -12,7 +12,6 @@ import LoginForm from './LoginForm';
 import UserService from "./service/UserService";
 
 
-
 import {
   Disclosure,
   DisclosureButton,
@@ -166,7 +165,7 @@ function Example({ user }){
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-white text-[#23262B]' : 'text-gray-300 hover:text-[#23262B]',
+                        item.current ? 'bg-white text-[#23262B]' : 'text-gray-800 hover:text-[#23262B]',
                         'block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}

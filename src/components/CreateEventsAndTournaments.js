@@ -69,7 +69,7 @@ function CreateEventsAndTournaments(){
 
 
   return (
-  <div className="bg-[#787578]">
+  <div className="bg-[#787578]"><br/>
     <div className="px-6 py-12 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Events & Tournaments</h1>
@@ -131,7 +131,8 @@ function CreateEventsAndTournaments(){
 
 
     <div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72">
-        <table class="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
             <thead class="rounded-3xl">
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -167,7 +168,7 @@ function CreateEventsAndTournaments(){
                         ))}
                       </tbody>
         </table>
-        </div>
+        </div></div>
         {deleteId && (
         <div className="fixed z-50 inset-0 overflow-y-auto">
           <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">

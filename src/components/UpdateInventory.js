@@ -79,15 +79,18 @@ function UpdateInventory() {
 
 
 
-    return(<>
-<div className="bg-white px-6 py-12 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Inventory</h1>
-          <p className="mt-3 text-lg text-gray-600">Update To the Inventory</p>
+    return(
+
+    <div className="bg-[#787578]"><br/>
+    <div className="px-6 py-12 sm:py-24 lg:px-8"><br/>
+        <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
+                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Inventory</h1>
+          <p className="mt-3 text-lg text-gray-600">Update To the Inventory</p><br/>
         </div>
+        <div className="bg-white/50 max-w-2xl rounded-3xl mx-auto">
         <form className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
 
-        <div className="sm:col-span-2">
+        <div className="sm:col-span-2"><br/>
             <label htmlFor="id" className="block text-sm font-semibold leading-6 text-gray-900">ID</label>
             <div className="mt-2.5">
               <input
@@ -192,19 +195,19 @@ function UpdateInventory() {
 
           <div className="mt-10">
             <button
-              className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-indigo-500 dark:bg-gray-700 dark:text-white dark:hover:bg-violate-900 focus:outline-none focus:shadow-outline"
+              className="w-full px-4 py-2 font-bold text-white bg-[#787578] rounded-full hover:text-[#F6AC01] dark:text-white focus:outline-none focus:shadow-outline"
               type="submit"
               onClick={handleSubmit}
             >
               Update
             </button>
-          </div>
+          </div><br/>
         </form>
-      </div>
+      </div></div>
 
     <Footer />
     <Sidebar />
-      </>
+      </div>
 
  )}
   export default UpdateInventory;

@@ -109,14 +109,15 @@ function AddInventory() {
 
 
 
-    return(<div className="bg-[#787578]">
+    return(
+    <div className="bg-[#787578]"><br/>
 <div className="bg-[#787578] px-6 py-12 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-2 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Inventory</h1>
           <p className="mt-3 text-lg text-gray-600">Add To the Inventory</p>
         </div>
-        <div className="bg-white/25 max-w-5xl rounded-3xl mx-auto p-3 mb-8">
-        <div className="rounded-3xl dark:bg-white/75 space-y-2 shadow-md p-3 ">
+        <div className="bg-white/50 max-w-5xl rounded-3xl mx-auto p-3 mb-8">
+        <div className="rounded-3xl space-y-2 p-3 ">
         <form className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
 
                     <div className="sm:col-span-2">
@@ -195,7 +196,7 @@ function AddInventory() {
               Add Inventory
             </button>
           </div>
-        </form>
+        </form><br/>
       </div></div></div>
 
 <section className="bg-[#787578]">
@@ -229,7 +230,8 @@ function AddInventory() {
                   </div>
 
         <div className="bg-white rounded-3xl w-250">
-        <table class="min-w-full divide-y divide-[#787578] overflow-x-auto mx-auto">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
             <thead>
                 <tr>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -289,7 +291,7 @@ function AddInventory() {
                    ))}
                  </tbody>
                </table></div>
-             </div>
+             </div></div>
 
              <section/>
 

@@ -44,7 +44,8 @@ function SportShedule() {
         <section className=" bg-white/25 rounded-3xl p-4 mb-4">
         <div className="bg-white rounded-3xl mx-auto">
           <h2 className="text-[#23262B] justify-center flex font-bold mb-8">MONDAY</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
+          <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50 mx-auto">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -83,12 +84,13 @@ function SportShedule() {
             </tbody>
           </table>
           </div>
-
+         </div>
 
           <br /><br />
         <div className="bg-white rounded-3xl">
           <h2 className="text-[#23262B] justify-center flex font-bold mb-8">TUESDAY</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -126,12 +128,13 @@ function SportShedule() {
                   ))}
                 </tbody>
           </table>
-          </div>
+          </div></div>
 
           <br /><br />
         <div className="bg-white rounded-3xl">
           <h2 className="text-[#23262B] justify-center flex font-bold mb-8">WEDNESDAY</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -170,11 +173,12 @@ function SportShedule() {
                 </tbody>
           </table>
           </div>
-
+         </div>
           <br /><br />
         <div className="bg-white rounded-3xl">
           <h2 className="text-[#23262B] justify-center flex font-bold mb-8">THURSDAY</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto mx-auto">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -213,11 +217,13 @@ function SportShedule() {
             </tbody>
           </table>
           </div>
+          </div>
 
           <br /><br />
         <div className="bg-white rounded-3xl">
           <h2 className="text-[#23262B] justify-center flex font-bold mb-8 mx-auto">FRIDAY</h2>
-          <table className="min-w-full divide-y divide-gray-200 overflow-x-auto rounded-3xl">
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -255,7 +261,7 @@ function SportShedule() {
               ))}
             </tbody>
           </table>
-
+            </div>
           </div></section>
 
 

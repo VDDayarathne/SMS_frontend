@@ -94,7 +94,7 @@ const Staff = () => {
 
   return (
     <div className="bg-[#787578]">
-      <Sidebar /><br/><br/>
+      <Sidebar /><br/><br/><br/>
       <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white/75 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
            <h1 className="text-4xl text-center text-[#23262B] font-bold mb-8">Staff</h1>
            <br/><br/>

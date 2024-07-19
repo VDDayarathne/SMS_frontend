@@ -33,7 +33,7 @@ return(
       <React.Fragment>
       <Sidebar />
       </React.Fragment>
-    }
+    }<br/><br/><br/>
 <div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
 <section className="dark:bg-[#787578] rounded-3xl dark:bg-white/25 space-y-2 dark:text-gray-800">
     <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">

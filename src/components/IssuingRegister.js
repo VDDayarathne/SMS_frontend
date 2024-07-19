@@ -65,7 +65,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
 
 
  return (
-  <div className="bg-[#787578]">
+  <div className="bg-[#787578]"><br/>
 <section>
 <div className="bg-[#787578] px-6 py-12 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
@@ -132,9 +132,11 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
 
 
 
-<div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72 w-250">
-  <table class="min-w-full divide-y divide-[#787578] overflow-x-auto w-250">
-      <thead class="rounded-3xl w-250">
+<div className="bg-white rounded-3xl sm:mx-32 lg:mx-32 xl:mx-72">
+
+  <div className="overflow-x-auto">
+    <table className="min-w-full divide-y divide-gray-200">
+      <thead class="rounded-3xl">
           <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Issuing Time
@@ -156,7 +158,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
               </th>
           </tr>
       </thead>
-      <tbody class="rounded-3xl divide-y divide-[#787578] w-250">
+      <tbody class="rounded-3xl divide-y divide-[#787578]">
         {issuingRegisters?.map((register, index) => (
           <tr key={index}>
               <td class="px-6 py-4 whitespace-nowrap">
@@ -182,7 +184,7 @@ const [issuingRegisters, setIssuingRegisters] = useState([]);
           ))}
        </tbody>
   </table>
-</div></section>
+</div></div></section>
 
 
   <br/><br/><br/>
