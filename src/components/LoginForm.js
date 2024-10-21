@@ -42,7 +42,7 @@ function LoginForm({ onLogin }) {
         <main className="login-container w-full h-screen flex flex-col items-center justify-center px-4">
             <div className="login-form max-w-sm w-full text-gray-600 space-y-5">
                 <div className="text-center pb-8">
-                    <img src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png" width={150} className="mx-auto" />
+                    <img src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png" width={150} className="mx-auto" />
                     <div className="mt-5">
                         <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Log in to your account</h3>
                     </div>

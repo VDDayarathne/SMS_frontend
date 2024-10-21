@@ -88,7 +88,7 @@ function Example({ user }){
                 <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
 
                   <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
-                        <img src="https://tourismconference.co/wp-content/uploads/2019/11/Sabaragamuwa-University-LOGO.png" width={50} height={50} className="mr-5 max-w-[50px] object-contain" />
+                        <img src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png" width={50} height={50} className="mr-5 max-w-[50px] object-contain" />
                         Sabaragamuwa University of Sri Lanka - Sport Center
                   </h1>
                 </div>

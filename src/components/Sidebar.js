@@ -101,7 +101,7 @@ function Sidebar() {
   ];
 
   const navsFooter = [
-    {
+    /*{
       href: "/help",
       name: "Help",
       icon: (
@@ -145,7 +145,7 @@ function Sidebar() {
           />
         </svg>
       ),
-    },
+    },*/
     {
       href: "/login",
       name: "Logout",
@@ -187,7 +187,7 @@ function Sidebar() {
             <div className="h-20 flex items-center justify-center px-8">
               <a href="#" className="flex-none">
                 <img
-                  src="https://tourismconference.co/wp-content/uploads/2019/11/Sabaragamuwa-University-LOGO.png"
+                  src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png"
                   width={35}
                   className="mx-auto"
                 />

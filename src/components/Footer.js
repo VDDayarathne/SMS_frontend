@@ -12,7 +12,7 @@ export default () => {
 			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-white-600">
 				<img
-                    src="https://www.wemakescholars.com/admin/uploads/providers/3JVNxCbjtw-huBlkXje2sBwXRq-CjNGk.png"
+                    src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png"
                     alt="Provider logo"
                     className="w-full h-full rounded-full object-cover"
                   />
