@@ -26,7 +26,8 @@ function ProfilePage() {
 
 
   return (
-    <div className="bg-[#787578]"><br/><br/><br/>
+
+    <div className="bg-[#787578] bg-[url('https://wallpaperaccess.com/full/1767847.jpg')] bg-cover bg-center"><br/><br/><br/>
     <Sidebar />
     <div className="mx-auto p-2 mb-8">
     <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>

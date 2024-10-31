@@ -185,7 +185,7 @@ function Sidebar() {
         >
           <div className="flex flex-col h-full">
             <div className="h-20 flex items-center justify-center px-8">
-              <a href="#" className="flex-none">
+              <a href="#" className="flex-none transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg">
                 <img
                   src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png"
                   width={35}
@@ -193,7 +193,7 @@ function Sidebar() {
                 />
               </a>
             </div>
-            <div className="flex-1 flex flex-col h-full">
+            <div className="flex-1 flex flex-col h-full transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg">
               <ul className="px-4 text-sm font-medium flex-1">
                 {navigation.map((item, idx) => (
                   <li key={idx}>
@@ -215,7 +215,7 @@ function Sidebar() {
                     <li key={idx}>
                       <a
                         href={item.href}
-                        className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg active:bg-gray-100 duration-150 group"
+                        className="relative flex items-center justify-center gap-x-2 text-gray-600 p-2 rounded-lg active:bg-gray-100 transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg group"
                       >
                         <div className="text-[#23262B]">{item.icon}</div>
                         <span className="absolute left-14 p-1 px-1.5 rounded-md whitespace-nowrap text-xs text-white bg-gray-800 hidden group-hover:inline-block group-focus:hidden duration-150">
@@ -245,11 +245,11 @@ function Sidebar() {
 
                     <DropdownMenu.Portal>
                       <DropdownMenu.Content className="absolute bottom-4 left-10 w-64 rounded-lg bg-white shadow-md border text-sm text-gray-600 p-2">
-                        <span className="block text-gray-500/80 p-2">email</span>
+
                         <DropdownMenu.Item asChild className="outline-none">
                           <a
                             href="/dashboard"
-                            className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                            className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg"
                           >
                             Dashboard
                           </a>
@@ -257,13 +257,13 @@ function Sidebar() {
                         <DropdownMenu.Item asChild className="outline-none">
                           <a
                             href="/userprofile"
-                            className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150"
+                            className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg"
                           >
                             Your Profile
                           </a>
                         </DropdownMenu.Item>
                         <DropdownMenu.Item asChild className="outline-none">
-                          <button className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 duration-150">
+                          <button className="block w-full p-2 text-left rounded-md hover:bg-gray-50 active:bg-gray-100 transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg">
                             <a href="/login">Logout</a>
                           </button>
                         </DropdownMenu.Item>

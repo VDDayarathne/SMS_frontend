@@ -36,10 +36,11 @@ function Inventory() {
 
 
     return (
-        <section className="bg-[#787578]">
+
+        <section className="bg-[#787578] bg-[url('https://img.freepik.com/premium-photo/all-sports-elements-dark-background_534373-20818.jpg')] bg-cover bg-center">
           <br />
           <br /><br />
-          <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white/75 space-y-2 shadow-md rounded-3xl p-0 mb-8">
+          <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white/75 space-y-2 shadow-md p-0 mb-8">
             <br />
             <h1 className="text-4xl text-center text-[#23262B] font-bold mb-8">Inventory</h1>
             <br /><br />

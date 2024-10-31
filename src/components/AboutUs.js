@@ -4,9 +4,9 @@ import Footer from './Footer';
 
 const AboutUs = () => {
   return (
-  < div className=" bg-[#787578]">
+  < div className="bg-[#787578] bg-[url('https://sfondo.info/i/original/a/0/8/83208.jpg')] bg-cover bg-center">
   <Sidebar />
-  <div className=" bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72"><br/><br/>
+  <div className="sm:mx-32 lg:mx-32 xl:mx-72"><br/><br/>
   <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl bg-white space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
      <h1 className="text-4xl text-center text-[#23262B] font-bold mb-8">About Us</h1>
      <br/><br/>

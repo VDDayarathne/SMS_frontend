@@ -28,13 +28,14 @@ function EventsAndTournaments() {
 
 return(
     <>
-<div className="bg-[#787578]">
+<div className="bg-[#787578] bg-[url('https://sfondo.info/i/original/a/0/8/83208.jpg')] bg-cover bg-center">
     {
       <React.Fragment>
       <Sidebar />
       </React.Fragment>
     }<br/><br/><br/>
-<div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
+
+<div className="bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72 ">
 <section className="dark:bg-[#787578] rounded-3xl dark:bg-white/25 space-y-2 dark:text-gray-800">
     <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
 		<div className="block max-w-sm rounded-3xl gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline dark:bg-gray-50">
@@ -53,7 +54,7 @@ return(
 
 	</div>
 </section>
-</div>
+</div><br/><br/><br/>
 
 {
   <React.Fragment>

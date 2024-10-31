@@ -28,11 +28,12 @@ function NotificationList() {
 
 
   return (
-    <div className="bg-[#787578]">
+
+    <div className="bg-[url('https://wallpaperaccess.com/full/1767847.jpg')] bg-cover bg-center">
       <Sidebar /><br/><br/>
-      <div className="bg-[#787578] dark:bg-white/25 space-y-2">
+      <div className="dark:bg-white/25 space-y-2">
       </div>
-      <div className="rounded-3xl bg-[#787578] space-y-2 container mx-auto ">
+      <div className="rounded-3xl  space-y-2 container mx-auto ">
       <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-3xl p-2 mb-8">
       <h1 className="text-2xl font-bold text-center text-[#23262B] mb-4">Notifications</h1></div>
         <div className="rounded-3xl dark:bg-white/25 space-y-2 shadow-md rounded-3xl p-8 mb-8">
@@ -50,7 +51,7 @@ function NotificationList() {
             ))}
           </ul>
         </div>
-      </div>
+      </div><br/><br/>
       <Footer />
     </div>
   );

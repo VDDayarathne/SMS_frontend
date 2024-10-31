@@ -89,7 +89,7 @@ function Example({ user }){
 
                   <h1 className="flex flex-raw text-3xl font-bold tracking-tight text-gray-900">
                         <img src="https://www.freepnglogos.com/uploads/sport-png/sport-steadman-philippon-institute-official-site-16.png" width={50} height={50} className="mr-5 max-w-[50px] object-contain" />
-                        Sabaragamuwa University of Sri Lanka - Sport Center
+                        SMS - Sport Center
                   </h1>
                 </div>
               </header>
@@ -101,15 +101,15 @@ function Example({ user }){
                   <div className="flex items-center">
 
                     <div className="hidden md:block">
-                      <div className="ml-10 flex items-baseline space-x-4">
+                      <div className="ml-10 flex items-baseline space-x-4 ">
                         {navigation.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-white text-[#23262B]'
-                                : 'text-[#2362B] hover:text-gray-500',
+                                ? 'bg-white text-[#23262B] transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg'
+                                : 'text-[#2362B] hover:text-black transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -132,7 +132,7 @@ function Example({ user }){
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="relative rounded-full  p-1 text-[#2362B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        className="relative rounded-full  p-1 text-[#2362B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 transition-transform transform-gpu hover:-translate-y-0"
                       >
                       <a href="/notification">
                         <span className="absolute -inset-1.5" />
@@ -176,7 +176,7 @@ function Example({ user }){
                   {profileInfo.role === 'ADMIN' && (
                     <DisclosureButton
                       href="/admin"
-                      className="block rounded-md px-3 py-2 text-base font-medium text-[#23262B] hover:text-gray-500"
+                      className="block rounded-md px-3 py-2 text-base font-medium text-[#23262B] hover:text-gray-500 transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg"
                     >
                       Admin Dashboard
                     </DisclosureButton>
@@ -188,7 +188,7 @@ function Example({ user }){
 
                     <button
                       type="button"
-                      className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-[#23262B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                      className="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-[#23262B] hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 transition-transform transform-gpu hover:-translate-y-1 "
                     >
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">View notifications</span>

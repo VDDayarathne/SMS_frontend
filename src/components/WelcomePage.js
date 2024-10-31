@@ -49,11 +49,16 @@ export default () => {
         <p className="px-8 mt-8 mb-12 text-lg">"Your sports world at a glance – manage teams, track progress, and plan events all from one place."</p>
         <div className="flex flex-wrap justify-center">
           <button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-blue-900 dark:text-gray-50">
+              <a href="/register">
+                Sign Up
+              </a>
+            </button>
+          <button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-blue-900 dark:text-gray-50">
             <a href="/login">
               Sign In
             </a>
           </button>
-          <button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300">Learn more</button>
+
         </div><br/>
       </div></div>
     </section>

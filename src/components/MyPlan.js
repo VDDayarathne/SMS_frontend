@@ -53,14 +53,15 @@ function MyPlan() {
     };
 
   return (
-    <div className="bg-[#787578]"><br/><br/><br/>
+
+    <div className="bg-[#787578] bg-[url('https://papers.co/desktop/wp-content/uploads/papers.co-hi04-lebron-james-nba-basketball-sports-dark-art-bw-29-wallpaper.jpg')] bg-cover bg-center "><br/><br/><br/>
     <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/75 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Create Your Own Plan</h1>
                 <br/><br/>
               </div>
         <div className="bg-white/25 max-w-5xl rounded-3xl mx-auto p-2 mb-8">
 
-            <div className="rounded-3xl dark:bg-white/75 space-y-2 shadow-md rounded-md p-2 mb-8">
+            <div className="rounded-3xl dark:bg-white/75 space-y-2 shadow-md p-2 mb-8">
               <div className="border-l-2 border-gray-500 pl-8">
                 {events && events.length > 0 && events.map((event, index) => (
                   <div key={index} className="flex flex-col md:flex-row md:justify-between">
@@ -88,7 +89,7 @@ function MyPlan() {
                   name="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-3xl border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>

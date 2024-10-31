@@ -34,9 +34,10 @@ function SportShedule() {
 
   return (
   <>
-  <div className=" bg-[#787578]">
-    <div className=" bg-[#787578] sm:mx-32 lg:mx-32 xl:mx-72">
-      <section className="bg-[#787578] py-20 rounded-3xl">
+
+  <div className=" bg-[#787578] bg-[url('https://sfondo.info/i/original/a/0/8/83208.jpg')] bg-cover bg-center">
+    <div className="sm:mx-32 lg:mx-32 xl:mx-72">
+      <section className="py-20 rounded-3xl">
 
         <div className="container mx-auto p-4">
         <div className=" bg-white/25 rounded-3xl p-1 mb-4">
