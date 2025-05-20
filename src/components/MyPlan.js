@@ -76,7 +76,7 @@ function MyPlan() {
 
         <div className="rounded-3xl px-6 py-12 sm:py-24 lg:px-8">
           <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Add A New Event</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Add a New Event</h1>
             <p className="mt-3 text-lg text-gray-600">Create your own</p>
           </div>
           <form className="mx-auto mt-16 max-w-xl sm:mt-20">

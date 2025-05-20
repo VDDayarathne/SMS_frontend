@@ -13,10 +13,10 @@ export default function Example() {
     <section className="m-4 md:m-4 dark:bg-[#787578] dark:text-[#23262B]">
         <br/><br/>
           <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-20 md:px-10 lg:px-32 xl:max-w-3xl">
-              <h1 className="text-4xl font-bold leading-none sm:text-5xl">"Welcome to the Ultimate Sport Management System"
+              <h1 className="text-4xl font-bold leading-none sm:text-5xl">"Welcome to the SMS Sabra"
               			<span className="dark:text-blue-900">Admin Dashboard!</span>
               		</h1>
-              <p className="px-8 mt-8 mb-12 text-lg text-[#23262B]">"Your sports world at a glance – manage teams, track progress, and plan events all from one place."</p>
+              <p className="px-8 mt-8 mb-12 text-lg text-[#23262B]">"Your sports world!!"</p>
           </div>
       </section>
       <div className=" bg-white/25 rounded-3xl p-4 mb-4">

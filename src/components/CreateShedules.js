@@ -108,7 +108,7 @@ function CreateShedules() {
       <div className="px-6 py-12 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-xl flex flex-col items-center justify-center text-center rounded-3xl dark:bg-white/50 space-y-2 shadow-md rounded-3xl p-0 mb-8"><br/>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Create Shedules</h1>
-          <p className="mt-3 text-lg text-gray-600">Create Shedules</p><br/>
+          <p className="mt-3 text-lg text-gray-600">Create Schedules</p><br/>
         </div>
         <div className="bg-white/50 max-w-2xl rounded-3xl mx-auto"><br/>
         <form className="mx-auto mt-16 max-w-xl sm:mt-5">

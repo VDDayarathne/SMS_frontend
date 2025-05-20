@@ -114,7 +114,7 @@ function CreateNotification(){
             type="submit"
             onClick={handleSubmit}
           >
-            Create Notification
+            Create Notifications
           </button>
         </div>
       </form><br/>
