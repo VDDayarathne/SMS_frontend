@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Redirect } from 'react';
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Example from './components/Dashboard';
 import Dashboard from './components/Dashboard';
 import LatestNews from './components/LatestNews';
@@ -64,11 +64,10 @@ function App() {
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/Latest-news" element={<LatestNews />} />
               <Route path="/Event-Tournament" element={<EventsAndTournament />} />
-              <Route path="/dashboard" element={user? <Dashboard user={user} onLogout={handleLogout} /> : <Redirect to="/" />} />
+              <Route path="/dashboard"element={user ? <Dashboard user={user} onLogout={handleLogout} /> : <Navigate to="/login" replace />}/>
               <Route path="/sport-shedule" element={<SportShedule />} />
               <Route path="/sidebar" element={user? <Sidebar /> : <Redirect to="/" />} />
               <Route path="/sports" element={<Swimming />} />
-              <Route path="/login" element={<LoginForm />} />
               <Route path="/logout" element={<LoginForm />} />
               <Route path="/welcome" element={<WelcomePage />} />
               <Route path="/admin" element={<AdminDashboard />} />
@@ -90,10 +89,6 @@ function App() {
               <Route path="/addinventory" element={<AddInventory />} />
               <Route path="/updateinventory/:inventoryId" element={<UpdateInventory />} />
               <Route path="/staff" element={<Staff />} />
-
-
-
-
 
             </Routes>
     </BrowserRouter>
